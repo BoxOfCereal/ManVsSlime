@@ -1,0 +1,3 @@
+status "here" .5
+keeptrigger
+map quickreturn 

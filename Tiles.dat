@@ -2,3 +2,7 @@ tile ColumnBig
 circle 0 0 0 64 32 12
 tile ColumnSmall
 circle 0 0 0 64 16 12
+tile latter
+slope 0 0 0 136 -32 -32 32 -32 32 32 -32 32
+cap
+doublesided
