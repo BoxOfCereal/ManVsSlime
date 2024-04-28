@@ -1,3 +1,20 @@
+//Player stats
+global.player.hp=100
+global.player.max_hp=100
+global.player.mp=50
+global.player.max_mp=50
+global.player.coins=0
+global.player.str=10
+global.player.dex=10
+global.player.int=10
+global.player.lvl=1
+global.player.exp=0
+global.player.cur_exp=0
+global.player.next_lv_exp_to_l=100
+
+global.player.luck=1
+global.player.dodge=1
+global.player.stealth=1
 
 
 map next
