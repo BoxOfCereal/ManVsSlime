@@ -3,6 +3,10 @@ circle 0 0 0 64 32 12
 tile ColumnSmall
 circle 0 0 0 64 16 12
 tile latter
-slope 0 0 0 136 -32 -32 32 -32 32 32 -32 32
+slope 0 0 0 148 -32 -32 32 -32 32 32 -32 32
 cap
 doublesided
+tile ladder
+slope 0 0 0 244 -32 -24 32 -24 32 24 -32 24
+tile UnnamedTile
+
