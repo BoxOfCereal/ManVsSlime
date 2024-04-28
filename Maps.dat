@@ -35,7 +35,7 @@ None
 m_playground.eem
 None
 None
-None
+trigger1.script
 None
 None
 None
@@ -57,7 +57,7 @@ None
 None
 None 0
 255 255 255
-0 0 0 1000
+0 0 0 10000
 255 255 255 64
 255 255 255 128
 255 255 255 256
