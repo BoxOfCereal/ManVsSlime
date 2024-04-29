@@ -12,15 +12,18 @@ IDLETO75,10
 75TOIDLE,10
 DEATH,10
 DEAD,10
-
+//SET I TO 0
 image d_zombieDoor 0 129
 
 state IDLE NONE 0
 frame 0 0.25 0 0 0 NONE
+frame 1 0.25 0 0 0 JUMPIFLESS map.zombieDoor0_HP 76 IDLETO75
 frame 9 0.25 0 0 0 READY
 
 state IDLE75 NONE 0
 frame 10 0.25 0 0 0 NONE
+frame 11 0.25 0 0 0 JUMPIFLESS map.zombieDoor0_HP 50 75TO50
+frame 12 0.25 0 0 0 JUMPIFGREATER map.zombieDoor0_HP 75 75TOIDLE
 frame 19 0.25 0 0 0 READY
 
 state IDLE50 NONE 0
@@ -31,11 +34,11 @@ state IDLE25 NONE 0
 frame 30 0.25 0 0 0 NONE
 frame 39 0.25 0 0 0 READY
 
-state IDLETO75 NONE 0
+state IDLETO75 IDLE75 0
 frame 40 0.25 0 0 0 NONE
 frame 49 0.25 0 0 0 READY
 
-state 75TO50 NONE 0
+state 75TO50 IDLE50 0
 frame 50 0.25 0 0 0 NONE
 frame 59 0.25 0 0 0 READY
 
@@ -59,7 +62,7 @@ state 50TO75 NONE 0
 frame 100 0.25 0 0 0 NONE
 frame 109 0.25 0 0 0 READY
 
-state 75TOIDLE NONE 0
+state 75TOIDLE IDLE 0
 frame 110 0.25 0 0 0 NONE
 frame 119 0.25 0 0 0 READY
 

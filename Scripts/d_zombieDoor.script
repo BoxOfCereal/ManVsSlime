@@ -1,0 +1,4 @@
+map.zombieDoor0_HP+=0.25
+status "$map.zombieDoor0_HP" .5
+
+map quickreturn 
