@@ -1,0 +1,7 @@
+vn 1
+text "MonsterDoor 0 hp:" 255 255 255
+text "$map.zombieDoor0_HP" 255 255 255
+text "$map.tickSwitch" 255 255 255
+
+vn 0
+map return

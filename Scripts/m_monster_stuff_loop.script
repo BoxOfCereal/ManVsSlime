@@ -1,1 +1,8 @@
+status "$map.zombieDoor0_HP,$map.tickSwitch" .5
 
+
+if "$map.tickSwitch" == 1 {
+    map.tickSwitch=0
+    map.zombieDoor0_HP-=1
+    status "$map.zombieDoor0_HP,$map.tickSwitch" .5
+}

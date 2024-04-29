@@ -1,0 +1,18 @@
+image d_metrognome 0 39
+
+state IDLE TICK 0
+frame 0 0.25 0 0 0 NONE
+frame 9 0.25 0 0 0 READY
+
+state TICK NONE 0
+frame 10 0.25 0 0 0 NONE
+frame 11 0.25 0 0 0 SETVAR map.tickSwitch 1
+
+state DEATH DEAD 0
+frame 20 0.166 0 0 0 NONE
+frame 21 0.166 0 0 0 NONE
+frame 29 0.166 0 0 0 NONE
+
+state DEAD NONE 0
+frame 30 0.25 0 0 0 NONE
+frame 39 0.25 0 0 0 NONE
