@@ -16,6 +16,15 @@ player check position map.playerLastPosX map.playerLastPosY map.playerLastPosZ
 }
 
 
+//zombieDoor1 - distribute zombies
+//if $map.randomNumber == 1 {
+//
+//if $map.zombieDoor1_Zombies < $map.zombieDoorMaxZombies {
+//map.zombieDoor1_Zombies+=1
+//}
+
+
+
 //m_monster_stuff.script
 //The stuff down here is for the lerp
 map.playerOffsetX=0 

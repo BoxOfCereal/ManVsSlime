@@ -1,16 +1,37 @@
-status "$map.zombieDoor0_HP,$map.tickSwitch, Zombies: $map.monsterCountZombies" .5 
+status "$map.zombieDoor0_HP,$map.tickSwitch, map.zombieDoor0_Zombies: $map.zombieDoor0_Zombies, randomNumber: $map.randomNumber , maximumMonstersInLevel: $map.maximumMonstersInLevel" .5 
 
 //tick logic
 //zombieDoors
 if "$map.tickSwitch" == 1 {
-status "$map.zombieDoor0_HP,$map.tickSwitch, Zombies: $map.monsterCountZombies" .5 
+status "$map.zombieDoor0_HP,$map.tickSwitch, map.zombieDoor0_Zombies: $map.zombieDoor0_Zombies" .5 
+
+//If there are more monsters left to be spawned
+if $map.monstersLeftToBeSpawned > 0 {
+
 //distribute zombies to zombieDoors
-//zombieDoor0
 
-
-if $map.zombieDoor0_HP > 0 {
-map.zombieDoor0_HP-=5  
+//zombieDoor0 - distribute zombies
+if $map.randomNumber == 0 {
+if $map.zombieDoor0_Zombies < 4 {
+map.zombieDoor0_Zombies+=1
+map.monstersLeftToBeSpawned-=1
 }
+}    
+}  
+
+
+
+}
+
+
+//calculate damages
+
+//zombieDoor0 - calculate damage
+if $map.zombieDoor0_HP > 0 {
+map.zombieDoor0_HP-=$map.zombieDoor0_Zombies 
+}
+
+
 }
 
 //tick logic MUST BE LAST

@@ -1,5 +1,5 @@
 //These are random numbers that are refreshed every tick rat handled by the metrognomee
-map.randomOneHundred 
+map.randomNumber=0
 
 //zombieDoors
 //All these variables concerned the zombie doors. Because there's no arrays you have to just copy and paste the amount that you want
@@ -12,6 +12,8 @@ map.zombieDoorMaxZombies=4
 
 map.monsterCountZombies=0
 map.maxMonsterCountZombies=4
+map.monstersLeftToBeSpawned=10
+map.currentMonstersInLevel=0
 
 
 //player
