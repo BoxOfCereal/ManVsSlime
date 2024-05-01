@@ -1,4 +1,4 @@
-//These are random numbers that are refreshed every tick rat handled by the metrognomee
+//These are random numbers that are refreshed every tick rate handled by the metrognomee
 map.randomNumber=0
 
 //zombieDoors
@@ -9,11 +9,20 @@ map.zombieDoor0_HP=100
 map.zombieDoor0_Zombies=0
 
 map.zombieDoorMaxZombies=4
+map.zombieDoorDamageScale=0.25
 
 map.monsterCountZombies=0
 map.maxMonsterCountZombies=4
 map.monstersLeftToBeSpawned=10
 map.currentMonstersInLevel=0
+
+
+//round logic
+map.currentRound=0
+map.ticksToNextRound=100
+map.ticksSinceLastRound=0
+map.ticksSinceMapStart=0
+//Could probably do frames since last tick to figure out some kind of delta
 
 
 //player
