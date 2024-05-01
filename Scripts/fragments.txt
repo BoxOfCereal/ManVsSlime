@@ -1,0 +1,30 @@
+//m_monster_stuff_loop.script
+//lerp
+if "$map.tickSwitch" == 1 {
+//player check position [varX] [varY] [varZ]
+map.playerLastPosX=0
+map.playerLastPosY=0
+map.playerLastPosZ=0
+map.playerCurrentPosX=0
+map.playerCurrentPosY=0
+map.playerCurrentPosZ=0
+
+player check position map.playerCurrentPosX map.playerCurrentPosY map.playerCurrentPosZ
+
+
+player check position map.playerLastPosX map.playerLastPosY map.playerLastPosZ
+}
+
+
+//m_monster_stuff.script
+//The stuff down here is for the lerp
+map.playerOffsetX=0 
+map.playerOffsetY=0 
+map.playerOffsetZ=0
+
+map.playerLastPosX=0
+map.playerLastPosY=0
+map.playerLastPosZ=0
+map.playerCurrentPosX=0
+map.playerCurrentPosY=0
+map.playerCurrentPosZ=0

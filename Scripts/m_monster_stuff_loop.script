@@ -1,8 +1,19 @@
-status "$map.zombieDoor0_HP,$map.tickSwitch" .5
+status "$map.zombieDoor0_HP,$map.tickSwitch, Zombies: $map.monsterCountZombies" .5 
 
-
+//tick logic
+//zombieDoors
 if "$map.tickSwitch" == 1 {
-    map.tickSwitch=0
-    map.zombieDoor0_HP-=1
-    status "$map.zombieDoor0_HP,$map.tickSwitch" .5
+status "$map.zombieDoor0_HP,$map.tickSwitch, Zombies: $map.monsterCountZombies" .5 
+//distribute zombies to zombieDoors
+//zombieDoor0
+
+
+if $map.zombieDoor0_HP > 0 {
+map.zombieDoor0_HP-=5  
+}
+}
+
+//tick logic MUST BE LAST
+if "$map.tickSwitch" == 1 {
+map.tickSwitch=0
 }

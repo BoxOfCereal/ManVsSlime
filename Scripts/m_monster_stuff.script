@@ -1,6 +1,22 @@
+//These are random numbers that are refreshed every tick rat handled by the metrognomee
+map.randomOneHundred 
+
+//zombieDoors
+//All these variables concerned the zombie doors. Because there's no arrays you have to just copy and paste the amount that you want
+//This is the definition of hard coding something into a mechanic and with data structures this can be much more efficient
 map.zombieDoor0_HP=100
-map.zombieDoor1_HP=100
-map.zombieDoor2_HP=100
-map.zombieDoor3_HP=100
+
+map.zombieDoor0_Zombies=0
+
+map.zombieDoorMaxZombies=4
+
+map.monsterCountZombies=0
+map.maxMonsterCountZombies=4
+
+
+//player
+//This is the stuff for the player again no data structures so it's just a mess of variables
+
+
 
 map start
