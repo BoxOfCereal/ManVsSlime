@@ -32,9 +32,10 @@ map.zombieDoor0_HP-=$damage
 
 }
 
+//timer and hud TODO
 //tick logic MUST BE LAST
 if "$map.tickSwitch" == 1 {
-map.ticksSinceMapStart+=1
+map.ticksSinceLastRound+=1
 map.tickSwitch=0
 }
 
