@@ -1,25 +1,29 @@
 image d_zombieDoorLogic 0 89
+image Custom89
+image Custom80
 
 state IDLE TICK 0
 frame 0 0.25 0 0 0 NONE
 frame 1 0.25 0 0 0 SETVAR map.zombieDoorLogicState "IDLE" 
-frame 1 0.25 0 0 0 JUMPIFLESS map.zombieDoor0_ZombiesLeft 1 IDLE
+frame 1 0.25 0 0 0 SETVAR chanceToSpawnZombie RANDOM(0,100)
+frame 1 0.25 0 0 0 JUMPIFLESS map.monstersLeftToBeSpawned 1 IDLE
 frame 2 0.25 0 0 0 JUMPIFGREATER map.zombieDoor0_Zombies 4 IDLE
 frame 9 0.25 0 0 0 READY
 
 state TICK IDLE 0
 frame 10 0.25 0 0 0 NONE
-frame 10 0.25 0 0 0 SETVAR map.zombieDoorLogicState "TICK"
-frame 11 0.25 0 0 0 SETVAR chanceToSpawnZombie RANDOM(0,100)
-frame 19 0.25 0 0 0 JUMPIFGREATER chanceToSpawnZombie 70 SPAWNLOGIC
+frame 11 0.25 0 0 0 SETVAR map.zombieDoorLogicState "TICK"
+frame 12 0.25 0 0 0 JUMPIFGREATER chanceToSpawnZombie 70 SPAWNLOGIC
+frame 13 0.25 0 0 0 PARTICLES 90 1,20,0,80,0 0,5,0
+frame 19 0.25 0 0 0 SETVAR chanceToSpawnZombie RANDOM(0,100)
 
-state SPAWNLOGIC NONE 0
+state SPAWNLOGIC IDLE 0
 frame 20 0.25 0 0 0 NONE
 frame 20 0.25 0 0 0 SETVAR map.zombieDoorLogicState "SPAWNLOGIC"
-frame 21 0.25 0 0 0 JUMPIFLESS map.zombieDoor0_Zombies 1 SPAWNZOMBIE0
-frame 22 0.25 0 0 0 JUMPIFLESS map.zombieDoor0_Zombies 2 SPAWNZOMBIE1
-frame 23 0.25 0 0 0 JUMPIFLESS map.zombieDoor0_Zombies 3 SPAWNZOMBIE2
-frame 24 0.25 0 0 0 JUMPIFLESS map.zombieDoor0_Zombies 4 SPAWNZOMBIE3
+frame 21 0.25 0 0 0 JUMPIFLEQUALS map.IsZombieDoorZeroZombieOneAlive 1 SPAWNZOMBIE0
+frame 22 0.25 0 0 0 JUMPIFLEQUALS map.zombieDoor0_Zombies 2 SPAWNZOMBIE1
+frame 23 0.25 0 0 0 JUMPIFLEQUALS map.zombieDoor0_Zombies 3 SPAWNZOMBIE2
+frame 24 0.25 0 0 0 JUMPIFLEQUALS map.zombieDoor0_Zombies 4 SPAWNZOMBIE3
 frame 29 0.25 0 0 0 READY
 
 SPAWNZOMBIE0 IDLE 0
