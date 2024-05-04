@@ -1,4 +1,5 @@
-status "S:$map.zombieDoorLogicState map.monstersLeftToBeSpawned $map.monstersLeftToBeSpawned" 1
+status "map.killZombieDoorZeroZombieOne: $map.killZombieDoorZeroZombieOne" 1
+//status "S:$map.zombieDoorLogicState map.monstersLeftToBeSpawned $map.monstersLeftToBeSpawned" 1
 //status "$map.zombieDoor0_HP , $map.tickSwitch, map.zombieDoor0_Zombies: $map.zombieDoor0_Zombies , "  .5 
 //timer and hud TODO
 //tick logic MUST BE LAST

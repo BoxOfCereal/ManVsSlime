@@ -2,15 +2,25 @@
 //This is the definition of hard coding something into a mechanic and with data structures this can be much more efficient
 map.zombieDoor0_HP=100
 map.zombieDoor0_Zombies=0
-map.zombieDoorMaxZombies=4
 map.zombieDoorDamageScale=2
 map.zombieDoorLogicState="NONE" 
+
+map.IsZombieDoorZeroZombieOneAlive=0
+map.IsZombieDoorZeroZombieTwoAlive=0
+map.IsZombieDoorZeroZombieThreeAlive=0
+map.IsZombieDoorZeroZombieFourAlive=0
+
+map.killZombieDoorZeroZombieFour=0
+map.killZombieDoorZeroZombieThree=0
+map.killZombieDoorZeroZombieTwo=0
+map.killZombieDoorZeroZombieOne=0
 
 //map stats
 map.monsterCountZombies=0
 map.maxMonsterCountZombies=4
 map.monstersLeftToBeSpawned=100
 map.currentMonstersInLevel=0
+map.thingsThatHaveBeenKilled=0
 
 
 //round logic
