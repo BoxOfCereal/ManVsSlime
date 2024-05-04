@@ -1,4 +1,4 @@
-d_zombieDoor 1
+d_zombieDoorProp0 1
 100
 0
 0
@@ -14,7 +14,7 @@ d_metrognome 2
 -1
 -1
 16 1 0 0 0
-d_zombieDoorZombie 3
+d_zombieDoorZombie0 3
 100
 1
 1
@@ -22,3 +22,11 @@ d_zombieDoorZombie 3
 -1
 -1
 16 1 0 0 1
+d_zombieDoorLogic0 4
+100
+0
+1
+1
+-1
+-1
+16 1 0 0 0
