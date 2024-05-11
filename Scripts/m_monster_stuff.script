@@ -2,7 +2,7 @@
 //This is the definition of hard coding something into a mechanic and with data structures this can be much more efficient
 map.zombieDoor0_HP=100
 map.zombieDoor0_Zombies=0
-map.zombieDoorDamageScale=2
+map.zombieDoorDamageScale=4
 map.zombieDoorLogicState="NONE" 
 
 map.IsZombieDoorZeroZombieOneAlive=0

@@ -4,7 +4,7 @@ image Custom80
 
 state IDLE TICK 0
 frame 0 0.25 0 0 0 NONE
-frame 88 0.25 0 0 0 CUSTOMPARTICLE 42 0.5 2,68,0 1,1,1 1 -0.25
+frame 0 0.25 0 0 0 CUSTOMPARTICLE 71 0.5 2,68,0 1,1,1 1 -0.25
 frame 1 0.25 0 0 0 SETVAR map.zombieDoorLogicState "IDLE" 
 frame 2 0.25 0 0 0 SETVAR chanceToSpawnZombie RANDOM(0,100)
 frame 3 0.25 0 0 0 NONE
@@ -14,7 +14,9 @@ frame 6 0.25 0 0 0 JUMPIFGREATER map.zombieDoor0_Zombies 3 IDLE
 frame 9 0.25 0 0 0 READY
 
 state NOTHING IDLE 0
-frame 8 0.25 0 0 0 NONE
+frame 86 0.25 0 0 0 NONE
+frame 87 0.25 0 0 0 CUSTOMPARTICLE 70 0.5 2,68,0 1,1,1 1 -0.25
+frame 88 0.25 0 0 0 READY
 
 state TICK IDLE 0
 frame 10 0.25 0 0 0 NONE
