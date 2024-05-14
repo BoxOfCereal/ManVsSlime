@@ -17,16 +17,20 @@ map.killZombieDoorZeroZombieOne=0
 
 //map stats
 map.monsterCountZombies=0
-map.maxMonsterCountZombies=4
-map.monstersLeftToBeSpawned=100
-map.currentMonstersInLevel=0
+map.baseMonstersToSpawn=3
+map.monstersLeftToBeSpawned=3
 map.thingsThatHaveBeenKilled=0
 
+map.zombiesToKillToWinRoundOne=25
+map.zombiesToKillToWinRoundTwo=50
+map.zombiesToKillToWinRoundThree=75
+map.zombiesToKillToWinRoundFour=100
 
 //round logic
 map.currentRound=0
-map.ticksToNextRound=100
-map.ticksSinceLastRound=0
+map.roundsToWin=1
+map.baseTicksToNextRound=10
+map.ticksToNextRound=10
 map.ticksSinceMapStart=0
 //Could probably do frames since last tick to figure out some kind of delta
 
