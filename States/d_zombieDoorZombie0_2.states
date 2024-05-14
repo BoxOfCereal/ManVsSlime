@@ -1,0 +1,24 @@
+image d_zombieDoorZombie 0 39
+
+state IDLE ATTACKDOOR 0
+frame 0 0.25 0 0 0 NONE
+frame 1 0.25 0 0 0 SETVAR map.IsZombieDoorZeroZombieTwoAlive 1
+frame 2 0.25 0 0 0 JUMPIFEQUALS map.killZombieDoorZeroZombieTwo 1 DEATH
+frame 9 0.25 0 0 0 READY
+
+state ATTACKDOOR IDLE 0
+frame 10 0.25 0 0 0 NONE
+frame 11 0.25 0 0 0 SETVAR damage 1
+frame 12 0.25 0 0 0 MULTIPLY damage $map.zombieDoorDamageScale
+frame 15 0.25 0 0 0 DECREMENT map.zombieDoor0_HP $damage
+frame 19 0.25 0 0 0 READY
+
+state DEATH DEAD 0
+frame 20 0.166 0 0 0 NONE
+frame 21 0.166 0 0 0 SETVAR map.IsZombieDoorZeroZombieTwoAlive 0
+frame 22 0.166 0 0 0 DECREMENT map.zombieDoor0_Zombies 1
+frame 29 0.166 0 0 0 NONE
+
+state DEAD NONE 0
+frame 30 0.25 0 0 0 NONE
+frame 39 0.25 0 0 0 NONE

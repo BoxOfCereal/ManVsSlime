@@ -1,21 +1,5 @@
-IDLE,10
-IDLE75,10
-IDLE50,10
-IDLE25,10
-IDLETO75,10
-75TO50,10
-50TO25,10
-25TO0,10
-0TO25,10
-25TO50,10
-50TO75,10
-75TOIDLE,10
-0DESTROYED,10
-SPAWNZOMBIE,10
-DEATH,10
-DEAD,10
-//SET I TO 0
 image d_zombieDoor 0 159
+image Custom42
 
 state IDLE NONE 0
 frame 0 0.25 0 0 0 NONE
@@ -26,12 +10,14 @@ state IDLE75 NONE 0
 frame 10 0.25 0 0 0 NONE
 frame 11 0.25 0 0 0 JUMPIFLESS map.zombieDoor0_HP 51 75TO50
 frame 12 0.25 0 0 0 JUMPIFGREATER map.zombieDoor0_HP 76 75TOIDLE
+frame 12 0.25 0 0 0 CUSTOMPARTICLE 62 1 2,68,0 0,0,0 3 0
 frame 19 0.25 0 0 0 READY
 
 state IDLE50 NONE 0
 frame 20 0.25 0 0 0 NONE
 frame 21 0.25 0 0 0 JUMPIFLESS map.zombieDoor0_HP 26 50TO25
 frame 22 0.25 0 0 0 JUMPIFGREATER map.zombieDoor0_HP 51 50TO75
+frame 23 0.25 0 0 0 CUSTOMPARTICLE 61 1 2,68,0 0,0,0 3 0
 frame 29 0.25 0 0 0 READY
 
 state IDLE25 NONE 0
@@ -81,9 +67,42 @@ frame 129 0.25 0 0 0 READY
 
 state SPAWNZOMBIE 0DESTROYED 0
 frame 130 0.25 0 0 0 NONE
-frame 131 0.25 0 0 0 SPAWN e_zombie 0,0,-32 0,0
+frame 131 0.25 0 0 0 JUMPIFLESS map.zombieDoor0_Zombies 0 0DESTROYED
+frame 131 0.25 0 0 0 SETVAR randomNumber RANDOM(0,100)
+frame 132 0.25 0 0 0 JUMPIFGREATER randomNumber 75 REMOVEZOMBIEFOUR
+frame 132 0.25 0 0 0 JUMPIFGREATER randomNumber 50 REMOVEZOMBIETHREE
+frame 132 0.25 0 0 0 JUMPIFGREATER randomNumber 25 REMOVEZOMBIETWO
+frame 132 0.25 0 0 0 JUMPIFGREATER randomNumber 0 REMOVEZOMBIEFOUR
 frame 132 0.25 0 0 0 INCREMENT map.monsterCountZombies 1
 frame 139 0.25 0 0 0 READY
+
+state REMOVEZOMBIEFOUR 0DESTROYED 0
+frame 140 0.25 0 0 0 NONE
+frame 141 0.25 0 0 0 JUMPIFEQUALS map.IsZombieDoorZeroZombieFourAlive 0 0DESTROYED
+frame 142 0.25 0 0 0 SETVAR map.killZombieDoorZeroZombieFour 1
+frame 143 0.25 0 0 0 SPAWN e_zombie 0,0,-32 0,0
+frame 149 0.25 0 0 0 READY
+
+state REMOVEZOMBIETHREE 0DESTROYED 0
+frame 150 0.25 0 0 0 NONE
+frame 151 0.25 0 0 0 JUMPIFEQUALS map.IsZombieDoorZeroZombieThreeAlive 0 0DESTROYED
+frame 152 0.25 0 0 0 SETVAR map.killZombieDoorZeroZombieThree 1
+frame 153 0.25 0 0 0 SPAWN e_zombie 0,0,-32 0,0
+frame 159 0.25 0 0 0 READY
+
+state REMOVEZOMBIETWO 0DESTROYED 0
+frame 160 0.25 0 0 0 NONE
+frame 161 0.25 0 0 0 JUMPIFEQUALS map.IsZombieDoorZeroZombieTwoAlive 0 0DESTROYED
+frame 162 0.25 0 0 0 SETVAR map.killZombieDoorZeroZombieTwo 1
+frame 163 0.25 0 0 0 SPAWN e_zombie 0,0,-32 0,0
+frame 169 0.25 0 0 0 READY
+
+state REMOVEZOMBIEONE 0DESTROYED 0
+frame 170 0.25 0 0 0 NONE
+frame 171 0.25 0 0 0 JUMPIFEQUALS map.IsZombieDoorZeroZombieOneAlive 0 0DESTROYED
+frame 172 0.25 0 0 0 SETVAR map.killZombieDoorZeroZombieOne 1
+frame 173 0.25 0 0 0 SPAWN e_zombie 0,0,-32 0,0
+frame 179 0.25 0 0 0 READY
 
 state DEATH DEAD 0
 frame 140 0.25 0 0 0 NONE

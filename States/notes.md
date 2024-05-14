@@ -1,0 +1,1 @@
+The zombie door prop is the actual piece that swan zombies

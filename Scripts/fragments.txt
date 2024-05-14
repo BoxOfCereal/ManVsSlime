@@ -37,3 +37,4 @@ map.playerLastPosZ=0
 map.playerCurrentPosX=0
 map.playerCurrentPosY=0
 map.playerCurrentPosZ=0
+

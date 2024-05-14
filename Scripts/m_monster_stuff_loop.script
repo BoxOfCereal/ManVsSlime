@@ -1,40 +1,11 @@
-status "$map.zombieDoor0_HP,$map.tickSwitch, map.zombieDoor0_Zombies: $map.zombieDoor0_Zombies, randomNumber: $map.randomNumber , maximumMonstersInLevel: $map.maximumMonstersInLevel" .5 
-
-//tick logic
-//zombieDoors
-if "$map.tickSwitch" == 1 {
-status "$map.zombieDoor0_HP,$map.tickSwitch, map.zombieDoor0_Zombies: $map.zombieDoor0_Zombies" .5 
-
-//If there are more monsters left to be spawned
-if $map.monstersLeftToBeSpawned > 0 {
-
-//distribute zombies to zombieDoors
-
-//zombieDoor0 - distribute zombies
-if $map.randomNumber == 0 {
-if $map.zombieDoor0_Zombies < 4 {
-map.zombieDoor0_Zombies+=1
-map.monstersLeftToBeSpawned-=1
-}
-}    
-}  
-
-
-
-}
-
-
-//calculate damages
-
-//zombieDoor0 - calculate damage
-if $map.zombieDoor0_HP > 0 {
-map.zombieDoor0_HP-=$map.zombieDoor0_Zombies 
-}
-
-
-}
-
+//status "map.killZombieDoorZeroZombieOne: $map.killZombieDoorZeroZombieOne" 1
+status "S:$map.zombieDoorLogicState map.monstersLeftToBeSpawned $map.monstersLeftToBeSpawned map.ticksToNextRound $map.ticksToNextRound" 1
+//status "$map.zombieDoor0_HP , $map.tickSwitch, map.zombieDoor0_Zombies: $map.zombieDoor0_Zombies , "  .5 
+//timer and hud TODO
 //tick logic MUST BE LAST
 if "$map.tickSwitch" == 1 {
+map.ticksSinceLastRound+=1
 map.tickSwitch=0
 }
+
+map quickreturn
