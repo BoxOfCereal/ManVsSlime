@@ -1,4 +1,5 @@
 vn 1
+
 text "MonsterDoor 0 hp:" 255 255 255
 text "map.zombieDoor0_HP: $map.zombieDoor0_HP" 255 255 255
 text "map.tickSwitch: $map.tickSwitch" 255 255 255

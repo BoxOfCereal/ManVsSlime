@@ -1,0 +1,13 @@
+//a=3
+//c=10
+a=33
+m=251
+seed=4//X + 0
+accumulator=0
+
+accumulator+=$seed
+accumulator*=$a
+accumulator%=$m //This is the PRNG.This becomes X + 1.
+
+accumulator+=$a
+accumulator%=$m //This is the PRNG.This becomes X + 2.

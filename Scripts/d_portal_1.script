@@ -1,0 +1,5 @@
+//sound [name] [path] - loads sound and sets it's name. Path rules are the same as for images. 
+sound warp Sounds/warp.wav
+//map goto [index] - moves to a certain map. index - map number in the list (starting from 0). 
+play video Videos/portal.vid
+map goto 3

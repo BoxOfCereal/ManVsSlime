@@ -28,7 +28,7 @@ map.zombiesToKillToWinRoundFour=100
 
 //round logic
 map.currentRound=0
-map.roundsToWin=1
+map.roundsToWin=4
 map.baseTicksToNextRound=10
 map.ticksToNextRound=10
 map.ticksSinceMapStart=0
@@ -38,6 +38,16 @@ map.ticksSinceMapStart=0
 //player
 //This is the stuff for the player again no data structures so it's just a mess of variables
 
+global.index=2
+global.varName="global.array_$global.index"
 
+// This part assigns the value to the dynamically created variable name
+global.array_2=5
 
+//text "Value: $global.array_2" 255 255 255  // Outputs: Value: 5
+
+index=0
+value=5
+text_$index=5
+text "$text_$index" 255 255 255
 map start

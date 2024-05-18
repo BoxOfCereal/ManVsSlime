@@ -1,4 +1,5 @@
 image d_metrognome 0 39
+sound portal_open
 
 state IDLE TICK 0
 frame 0 0.25 0 0 0 NONE
@@ -7,26 +8,59 @@ frame 9 0.25 0 0 0 READY
 state TICK NONE 0
 frame 10 0.25 0 0 0 NONE
 frame 11 0.25 0 0 0 SETVAR map.tickSwitch 1
-frame 12 0.25 0 0 0 HUDIMG t 100 100 3 HUD/num0.png 1 
 frame 13 0.25 0 0 0 INCREMENT map.ticksSinceMapStart 1
 frame 14 0.25 0 0 0 DECREMENT map.ticksToNextRound 1
 frame 18 0.25 0 0 0 CLAMP map.ticksToNextRound 0 $map.baseTicksToNextRound
+frame 19 0.25 0 0 0 JUMPIFEQUALS map.currentRound $map.roundsToWin WIN
 frame 19 0.25 0 0 0 JUMPIFLEQUALS map.ticksToNextRound 0 NEXTROUND
 
 state NEXTROUND IDLE 0
 frame 20 0.25 0 0 0 NONE
 frame 13 0.25 0 0 0 INCREMENT map.currentRound 1
 frame 13 0.25 0 0 0 JUMPIFEQUALS map.currentRound $map.roundsToWin WIN
-frame 13 0.25 0 0 0 INCREMENT map.baseTicksToNextRound 30
+frame 13 0.25 0 0 0 JUMPIFEQUALS map.currentRound 1 ROUND1
+frame 13 0.25 0 0 0 JUMPIFEQUALS map.currentRound 2 ROUND2
+frame 13 0.25 0 0 0 JUMPIFEQUALS map.currentRound 3 ROUND3
+frame 13 0.25 0 0 0 JUMPIFEQUALS map.currentRound 4 ROUND4
+frame 29 0.25 0 0 0 NONE
+
+state ROUND1 IDLE 0
+frame 30 0.25 0 0 0 NONE
+frame 13 0.25 0 0 0 INCREMENT map.baseTicksToNextRound 1
 frame 13 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksToNextRound
 frame 13 0.25 0 0 0 INCREMENT map.baseMonstersToSpawn 3
 frame 13 0.25 0 0 0 INCREMENT map.monstersLeftToBeSpawned $map.baseMonstersToSpawn
-frame 29 0.25 0 0 0 NONE
+
+state ROUND2 IDLE 0
+frame 30 0.25 0 0 0 NONE
+frame 13 0.25 0 0 0 INCREMENT map.baseTicksToNextRound 1
+frame 13 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksToNextRound
+frame 13 0.25 0 0 0 INCREMENT map.baseMonstersToSpawn 3
+frame 13 0.25 0 0 0 INCREMENT map.monstersLeftToBeSpawned $map.baseMonstersToSpawn
+
+state ROUND3 IDLE 0
+frame 30 0.25 0 0 0 NONE
+frame 13 0.25 0 0 0 INCREMENT map.baseTicksToNextRound 1
+frame 13 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksToNextRound
+frame 13 0.25 0 0 0 INCREMENT map.baseMonstersToSpawn 3
+frame 13 0.25 0 0 0 INCREMENT map.monstersLeftToBeSpawned $map.baseMonstersToSpawn
+
+state ROUND4 IDLE 0
+frame 30 0.25 0 0 0 NONE
+frame 13 0.25 0 0 0 INCREMENT map.baseTicksToNextRound 1
+frame 13 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksToNextRound
+frame 13 0.25 0 0 0 INCREMENT map.baseMonstersToSpawn 3
+frame 13 0.25 0 0 0 INCREMENT map.monstersLeftToBeSpawned $map.baseMonstersToSpawn
 
 state WIN IDLE 0
 frame 30 0.25 0 0 0 NONE
-frame 31 0.25 0 0 0 CUSTOMPARTICLE 72 0.5 2,68,0 1,1,1 1 -0.25
-frame 32 0.25 0 0 0 SPAWN d_portal 0,0,32 0,0
+frame 31 0.25 0 0 0 SOUND 0
+frame 31 0.25 0 0 0 CUSTOMPARTICLE 72 0.5 2,120,0 1,1,1 1 -0.25
+frame 31 0.25 0 0 0 CUSTOMPARTICLE 72 0.5 2,120,0 1,1,1 1 -0.25
+frame 31 0.25 0 0 0 CUSTOMPARTICLE 72 0.5 2,120,0 1,1,1 1 -0.25
+frame 31 0.25 0 0 0 CUSTOMPARTICLE 72 0.5 2,120,0 1,1,1 1 -0.25
+frame 31 0.25 0 0 0 CUSTOMPARTICLE 72 0.5 2,120,0 1,1,1 1 -0.25
+frame 32 0.25 0 0 0 SPAWN d_portal_1 0,0,64 0,0
 frame 39 0.25 0 0 0 NONE
 
 state DEATH DEAD 0

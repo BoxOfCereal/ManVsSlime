@@ -1,0 +1,13 @@
+
+global.score_0=10
+global.score_1=20
+global.score_2=30
+
+procedure getScore
+    global.varname="global.score_" + $index
+    text "Score: $" + $global.varname
+end
+
+// Usage
+index=2
+call getScore
