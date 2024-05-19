@@ -16,7 +16,7 @@ frame 19 0.25 0 0 0 READY
 state DEATH DEAD 0
 frame 20 0.166 0 0 0 NONE
 frame 21 0.166 0 0 0 SETVAR map.IsZombieDoorZeroZombieTwoAlive 0
-frame 22 0.166 0 0 0 DECREMENT map.zombieDoor0_Zombies 1
+frame 22 0.166 0 0 0 SETVAR map.killZombieDoorZeroZombieTwo 0
 frame 29 0.166 0 0 0 NONE
 
 state DEAD NONE 0

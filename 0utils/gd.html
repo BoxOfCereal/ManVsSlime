@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Generator</title>
+</head>
+<body>
+    <h4>Image Generator</h4>
+    <p>This application will take in a state's file from EFPSE <img src="EFPSE_icon.png" width="28px" alt="EFPSE logo" style="margin-bottom:-8px"> and generate an image for each frame.</p>
+    <span>⬇️📝</span>        
+    <h5>INPUT</h5>
+    <pre>
+image Decoration 0 4
+
+state IDLE NONE 0
+frame 0 0.25 0 0 0 NONE
+frame 0 0.25 0 0 0 READY
+
+state DEATH DEAD 0
+frame 1 0.166 0 0 0 NONE
+frame 2 0.166 0 0 0 NONE
+frame 3 0.166 0 0 0 NONE
+
+state DEAD NONE 0
+frame 4 0.25 0 0 0 NONE
+frame 4 0.25 0 0 0 NONE
+    </pre>
+    <span>⬇️📁</span>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin: 20px;
+        }
+
+        .left-column {
+            width: 45%;
+        }
+
+        .right-column {
+            width: 45%;
+        }
+
+        #imageGrid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+        }
+
+        .image-item {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+    <div class="container">
+        <div class="left-column">
+            <h4>OUTPUT</h4>
+            <code>images.zip</code>
+            <ul id="imageList"></ul>
+        </div>
+        <span>➡️🖼️</span>
+        <div class="right-column">
+            <h4>Images</h4>
+            <div id="imageGrid"></div>
+        </div>
+    </div>
+
+    <p>Paste your script here:</p>
+    <textarea id="scriptInput" rows="20" cols="50" placeholder="Paste your script here..."></textarea><br>
+    <p>Once you click this button a link will appear below and you can click on that link to download a zip file named <code>📁images.zip</code> that contains your debug images</p>
+    <button onclick="generateImages()">Generate Images</button><br>
+    <a id="downloadLink" style="display: none;">Download Images</a>
+    <h5>Updated Script</h5>
+    <pre id="updatedScript"></pre>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+    <script>
+        function generateImages() {
+            const scriptContent = document.getElementById('scriptInput').value.trim();
+            const scriptLines = scriptContent.split('\n');
+            let frameCounters = {};
+            let imageName = '';
+            let stateName = '';
+            let frameIndex = 0;
+            let zip = new JSZip();
+            let updatedScript = '';
+            let frameNumber = 0;
+
+            let imageFound = false;
+
+            scriptLines.forEach((line, index) => {
+                const parts = line.split(' ');
+
+                if (parts[0] === 'image' && !imageFound) {
+                    imageName = parts[1];
+                    console.log(imageName);
+                    frameCounters[imageName] = 0;
+                    imageFound = true;
+                    updatedScript += line + '\n';
+                } else if (parts[0] === 'state') {
+                    stateName = parts[1];
+                    frameIndex = 0;
+                    updatedScript += line + '\n';
+                } else if (parts[0] === 'frame' && imageFound) {
+                    const frameStatement = parts.slice(1, 6).join(' ');
+                    const action = parts.slice(6).join(' ');
+                    const text = `State: ${stateName}\nFrame: ${frameIndex}\nFrame Statement: ${frameStatement}\nAction: ${action}`;
+                    const imageNameWithNumber = `${imageName}${frameNumber}`;
+                    createImage(text, imageNameWithNumber, zip);
+
+                    // Add updated frame line to the script
+                    console.log(parts)
+                    console.log(`frame ${frameNumber} ${parts.slice(2).join(' ')}\n`)
+                    updatedScript += `frame ${frameNumber} ${parts.slice(2).join(' ')}\n`;
+
+                    frameIndex++;
+                    frameNumber++;
+                } else {
+                    updatedScript += line + '\n';
+                }
+            });
+
+            document.getElementById('updatedScript').textContent = updatedScript.trim();
+
+            zip.generateAsync({ type: "blob" })
+                .then(function (content) {
+                    const downloadLink = document.getElementById('downloadLink');
+                    downloadLink.href = window.URL.createObjectURL(content);
+                    downloadLink.download = 'images.zip';
+                    downloadLink.style.display = 'inline';
+                });
+        }
+
+        function createImage(text, imageName, zip) {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = 400;
+            canvas.height = 200;
+            ctx.fillStyle = 'white';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = 'black';
+            ctx.font = '14px Arial';
+            const lines = text.split('\n');
+            lines.forEach((line, index) => {
+                ctx.fillText(line, 10, 20 + index * 20);
+            });
+            const dataURL = canvas.toDataURL('image/png').split(',')[1];
+            zip.file(`${imageName}.png`, dataURL, { base64: true });
+
+            const imgContainer = document.createElement('div');
+            imgContainer.classList.add('image-item');
+            const imgElement = document.createElement('img');
+            imgElement.src = 'data:image/png;base64,' + dataURL;
+            imgContainer.appendChild(imgElement);
+            document.getElementById('imageGrid').appendChild(imgContainer);
+
+            const imgListItem = document.createElement('li');
+            imgListItem.textContent = `🖼️ ${imageName}.png`;
+            document.getElementById('imageList').appendChild(imgListItem);
+        }
+    </script>
+</body>
+</html>
