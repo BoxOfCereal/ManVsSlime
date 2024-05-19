@@ -1,7 +1,6 @@
 //All these variables concerned the zombie doors. Because there's no arrays you have to just copy and paste the amount that you want
 //This is the definition of hard coding something into a mechanic and with data structures this can be much more efficient
 map.zombieDoor0_HP=100
-map.zombieDoor0_Zombies=0
 map.zombieDoorDamageScale=4
 map.zombieDoorLogicState="NONE" 
 
@@ -27,10 +26,11 @@ map.zombiesToKillToWinRoundThree=75
 map.zombiesToKillToWinRoundFour=100
 
 //round logic
+map.spawnDogsSwitch=0
 map.currentRound=0
-map.roundsToWin=4
-map.baseTicksToNextRound=10
-map.ticksToNextRound=10
+map.roundsToWin=25
+map.baseTicksToNextRound=20
+map.ticksToNextRound=20
 map.ticksSinceMapStart=0
 //Could probably do frames since last tick to figure out some kind of delta
 
