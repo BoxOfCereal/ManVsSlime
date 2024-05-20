@@ -2,8 +2,8 @@ image d_dogSpawner 0 15
 
 state IDLE TICK 0
 frame 0 0.25 0 0 0 NONE
-frame 1 0.25 0 0 0 CUSTOMPARTICLE 71 0.5 2,68,0 1,1,1 1 -0.25
 frame 2 0.25 0 0 0 JUMPIFEQUALS map.spawnDogSwitch 1 TICK
+frame 1 0.25 0 0 0 CUSTOMPARTICLE 71 0.5 2,68,0 1,1,1 1 -0.25
 frame 3 0.25 0 0 0 READY
 
 state NOTHING IDLE 0
@@ -12,8 +12,10 @@ frame 5 0.25 0 0 0 READY
 
 state TICK NONE 0
 frame 6 0.25 0 0 0 NONE
-frame 7 10 0 0 0 SPAWN e_dog -32,0,-32 0,0
 frame 2 0.25 0 0 0 JUMPIFEQUALS map.spawnDogSwitch 0 NOTHING
+frame 1 0.25 0 0 0 SETVAR randomXCoordinate RANDOM(-64,64)
+frame 2 0.25 0 0 0 SETVAR randomYCoordinate RANDOM(-64,64)
+frame 7 10 0 0 0 SPAWN d_dogPortal $randomXCoordinate,0,$randomYCoordinate 0,0
 frame 8 0.25 0 0 0 NONE
 
 state DEAD NONE 0

@@ -1,0 +1,16 @@
+image d_dogPortal 0 15
+sound dog_portal
+
+state IDLE TICK 0
+frame 0 0.25 0 0 0 NONE
+frame 3 0.25 0 0 0 READY
+
+state TICK DEAD 0
+frame 6 0.25 0 0 0 NONE
+frame 2 0.25 0 0 0 JUMPIFEQUALS map.spawnDogSwitch 0 NOTHING
+frame 7 0.25 0 0 0 SPAWN d_dog 32,0,-32 0,0
+frame 8 0.25 0 0 0 NONE
+
+state DEAD NONE 0
+frame 9 0.25 0 0 0 NONE
+frame 10 0.25 0 0 0 NONE
