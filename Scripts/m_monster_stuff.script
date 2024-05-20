@@ -29,8 +29,8 @@ map.zombiesToKillToWinRoundFour=100
 map.spawnDogsSwitch=0
 map.currentRound=0
 map.roundsToWin=25
-map.baseTicksToNextRound=20
-map.ticksToNextRound=20
+map.baseTicksToNextRound=200
+map.ticksToNextRound=200
 map.ticksSinceMapStart=0
 //Could probably do frames since last tick to figure out some kind of delta
 

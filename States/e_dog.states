@@ -1,37 +1,41 @@
-
-image e_dog 0 12
+image e_dog 0 23
 
 state IDLE NONE 0
 frame 0 0.125 0 0 0 NONE
-frame 0 0.125 0 0 0 READY
+frame 1 0.125 0 0 0 READY
 
 state SEE CHASE 0
-frame 0 0.125 0 0 0 NONE
-frame 0 0.125 0 0 0 READY
+frame 2 0.125 0 0 0 NONE
+frame 3 0.125 0 0 0 READY
 
 state CHASE NONE 0
-frame 1 1 0 0 0 NONE
-frame 2 1 0 0 0 NONE
-frame 3 1 0 0 0 NONE
-frame 4 1 0 0 0 READY
+frame 4 1 0 0 0 NONE
+frame 5 1 0 0 0 NONE
+frame 6 1 0 0 0 NONE
+frame 7 1 0 0 0 READY
 
-state ATTACK CHASE 0
-frame 5 0.25 0 0 0 NONE
-frame 5 0.25 0 0 0 NONE
-frame 6 0.0625 0 0 0 NONE
-frame 6 0.0625 0 0 0 ATTACK
-frame 5 0.25 0 0 0 NONE
-frame 5 0.25 0 0 0 READY
+state ATTACK FLEE 0
+frame 8 0.25 0 0 0 NONE
+frame 9 0.0625 0 0 0 ATTACK
+frame 10 0.25 0 0 0 READY
+
+state FLEE CHASE 0
+frame 11 0.25 0 0 0 NONE
+frame 12 0.25 0 0 0 NONE
+frame 13 0.25 0 0 0 NONE
+frame 14 0.25 0 0 0 NONE
+frame 15 0.25 0 0 0 NONE
+frame 16 0.25 0 0 0 READY
 
 state HURT CHASE 0
-frame 7 0.125 0 0 0 NONE
-frame 8 0.125 0 0 0 NONE
+frame 17 0.125 0 0 0 NONE
+frame 18 0.125 0 0 0 NONE
 
 state DEATH DEAD 0
-frame 9 0.166 0 0 0 NONE
-frame 10 0.166 0 0 0 NONE
-frame 11 0.166 0 0 0 NONE
+frame 19 0.166 0 0 0 NONE
+frame 20 0.166 0 0 0 NONE
+frame 21 0.166 0 0 0 NONE
 
 state DEAD NONE 0
-frame 12 0.125 0 0 0 NONE
-frame 12 0.125 0 0 0 NONE
+frame 22 0.125 0 0 0 NONE
+frame 23 0.125 0 0 0 NONE
