@@ -33,5 +33,8 @@ map.ticksSinceMapStart=0
 
 
 //player
+map.currentPlayerScore=0
+map.maxPlayerScore=0
+
 //This is the stuff for the player again no data structures so it's just a mess of variables
 map start
