@@ -1,7 +1,9 @@
-//status "map.killZombieDoorZeroZombieOne: $map.killZombieDoorZeroZombieOne" 1
-status "map.monstersLeftToBeSpawned $map.monstersLeftToBeSpawned map.ticksToNextRound $map.ticksToNextRound map.currentRound : $map.currentRound" 1
+status "monstersLeft $map.monstersLeftToBeSpawned NextRound : $map.ticksToNextRound $map.nameOfCurrentRound DogSwitch: $map.spawnDogsSwitch" 1
+
+//status "map.monstersLeftToBeSpawned $map.monstersLeftToBeSpawned map.ticksToNextRound $map.ticksToNextRound map.currentRound : $map.currentRound" 1
 //status "S:$map.zombieDoorLogicState map.monstersLeftToBeSpawned $map.monstersLeftToBeSpawned map.ticksToNextRound $map.ticksToNextRound" 1
 //status "$map.zombieDoor0_HP , $map.tickSwitch, map.zombieDoor0_Zombies: $map.zombieDoor0_Zombies , "  .5 
+//status "map.killZombieDoorZeroZombieOne: $map.killZombieDoorZeroZombieOne" 1
 //timer and hud TODO
 //tick logic MUST BE LAST
 if "$map.tickSwitch" == 1 {

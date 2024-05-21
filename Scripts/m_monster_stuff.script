@@ -20,34 +20,18 @@ map.baseMonstersToSpawn=3
 map.monstersLeftToBeSpawned=3
 map.thingsThatHaveBeenKilled=0
 
-map.zombiesToKillToWinRoundOne=25
-map.zombiesToKillToWinRoundTwo=50
-map.zombiesToKillToWinRoundThree=75
-map.zombiesToKillToWinRoundFour=100
 
-//round logic
+/round logic
+map.nameOfCurrentRound="Round 0"
 map.spawnDogsSwitch=0
 map.currentRound=0
 map.roundsToWin=25
-map.baseTicksToNextRound=200
-map.ticksToNextRound=200
+map.baseTicksToNextRound=5
+map.ticksToNextRound=5
 map.ticksSinceMapStart=0
 //Could probably do frames since last tick to figure out some kind of delta
 
 
 //player
 //This is the stuff for the player again no data structures so it's just a mess of variables
-
-global.index=2
-global.varName="global.array_$global.index"
-
-// This part assigns the value to the dynamically created variable name
-global.array_2=5
-
-//text "Value: $global.array_2" 255 255 255  // Outputs: Value: 5
-
-index=0
-value=5
-text_$index=5
-text "$text_$index" 255 255 255
 map start

@@ -54,10 +54,26 @@ d_zombieDoorZombie0_4 7
 -1
 -1
 16 1 0 0 1
-d_portal_1 8
+d_portalWin 8
 100
 0
+0
 1
+-1
+-1
+16 1 0 0 0
+d_dogSpawner 9
+100
+0
+0
+1
+-1
+-1
+16 0 0 0 0
+d_dogPortal 10
+100
+0
+0
 1
 -1
 -1

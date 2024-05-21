@@ -27,6 +27,7 @@ frame 29 0.25 0 0 0 NONE
 
 state ROUND1 IDLE 0
 frame 30 0.25 0 0 0 NONE
+frame 13 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 1"
 frame 13 0.25 0 0 0 INCREMENT map.baseTicksToNextRound 1
 frame 13 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksToNextRound
 frame 13 0.25 0 0 0 INCREMENT map.baseMonstersToSpawn 3
@@ -34,6 +35,7 @@ frame 13 0.25 0 0 0 INCREMENT map.monstersLeftToBeSpawned $map.baseMonstersToSpa
 
 state ROUND2 IDLE 0
 frame 30 0.25 0 0 0 NONE
+frame 13 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 2"
 frame 13 0.25 0 0 0 INCREMENT map.baseTicksToNextRound 1
 frame 13 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksToNextRound
 frame 13 0.25 0 0 0 INCREMENT map.baseMonstersToSpawn 3
@@ -41,6 +43,7 @@ frame 13 0.25 0 0 0 INCREMENT map.monstersLeftToBeSpawned $map.baseMonstersToSpa
 
 state ROUND3DOG TICKDOG 0
 frame 30 0.25 0 0 0 NONE
+frame 13 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 3 (DOGS)"
 frame 13 0.25 0 0 0 INCREMENT map.baseTicksToNextRound 1
 frame 13 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksToNextRound
 frame 13 0.25 0 0 0 INCREMENT map.baseMonstersToSpawn 3
