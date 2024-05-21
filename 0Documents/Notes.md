@@ -1,6 +1,13 @@
 
 ## Game components
 
+### gd
+python gd.py --input C:\Users\SeltT\OneDrive\Desktop\Projects\ManVsSlime\States\d_metrognome.states --output C:\Users\SeltT\OneDrive\Desktop\Projects\ManVsSlime\Sprites\Decorations  
+
+If you get a permission denied it's probably because EFPSE editor is open
+
+### Metrognome
+The metronome is just one state machine that pretty much handles all logic in the game it updates a tick counter so that things run once every so many seconds that's my timer for basically everything. It handles the timer and the switching rounds so it's basically the game state machine.
 
 ### dogs
 The dog components consist of the following

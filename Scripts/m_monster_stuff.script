@@ -17,11 +17,13 @@ map.killZombieDoorZeroZombieOne=0
 //map stats
 map.monsterCountZombies=0
 map.baseMonstersToSpawn=3
-map.monstersLeftToBeSpawned=3
+map.monstersLeftToBeSpawned=0
 map.thingsThatHaveBeenKilled=0
 
 
 /round logic
+map.baseTicksTillIntroEnd=30
+map.baseTicksTillBreakEnd=11
 map.nameOfCurrentRound="Round 0"
 map.spawnDogsSwitch=0
 map.currentRound=0
