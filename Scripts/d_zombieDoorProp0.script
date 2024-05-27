@@ -5,6 +5,7 @@ map.zombieDoor0_HP+=$zombieDoor0HealAmount
 playerScoreAmount=1
 playerScoreAmount*=$map.playerScoreScale
 map.currentPlayerScore+=$playerScoreAmount
+map.maxPlayerScore+=$playerScoreAmount
 }
 
 status "$map.zombieDoor0_HP, $map.currentPlayerScore" .5

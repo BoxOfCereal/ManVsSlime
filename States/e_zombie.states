@@ -32,6 +32,7 @@ frame 49 0.25 0 0 0 NONE
 state HURTBYWEAPON0 CHASE 0
 frame 50 0.25 0 0 0 NONE
 frame 49 0.25 0 0 0 INCREMENT map.maxPlayerScore 15
+frame 49 0.25 0 0 0 INCREMENT map.currentPlayerScore 15
 frame 59 0.25 0 0 0 SOUND 0
 frame 1 0.25 0 0 0 CUSTOMPARTICLE 3 0.5 2,68,0 1,1,1 1 -0.25
 frame 59 0.25 0 0 0 READY
