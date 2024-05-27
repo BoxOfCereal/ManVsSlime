@@ -1,7 +1,12 @@
 if $map.zombieDoor0_HP < 100 {
-map.zombieDoor0_HP+=0.25
+zombieDoor0HealAmount=1
+zombieDoor0HealAmount*=$map.zombieDoorHealScale
+map.zombieDoor0_HP+=$zombieDoor0HealAmount
+playerScoreAmount=1
+playerScoreAmount*=$map.playerScoreScale
+map.currentPlayerScore+=$playerScoreAmount
 }
 
-status "$map.zombieDoor0_HP" .5
+status "$map.zombieDoor0_HP, $map.currentPlayerScore" .5
 
 map quickreturn 

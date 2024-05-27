@@ -2,6 +2,7 @@
 //This is the definition of hard coding something into a mechanic and with data structures this can be much more efficient
 map.zombieDoor0_HP=100
 map.zombieDoorDamageScale=4
+map.zombieDoorHealScale=1
 map.zombieDoorLogicState="NONE" 
 
 map.IsZombieDoorZeroZombieOneAlive=0
@@ -22,7 +23,7 @@ map.thingsThatHaveBeenKilled=0
 
 
 /round logic
-map.baseTicksTillIntroEnd=30
+map.baseTicksTillIntroEnd=5
 map.baseTicksTillBreakEnd=11
 map.nameOfCurrentRound="Round 0"
 map.spawnDogsSwitch=0
@@ -35,8 +36,11 @@ map.ticksSinceMapStart=0
 
 
 //player
+global.currentWeaponIndex=0
 map.currentPlayerScore=0
 map.maxPlayerScore=0
+map.playerScoreScale=1
+
 
 //This is the stuff for the player again no data structures so it's just a mess of variables
 map start

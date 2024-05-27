@@ -1,3 +1,54 @@
+ I thought about doing something like this myself by taking the coordinates of the player in predefined coordinates on the map somewhere and then checking the distance and if the player is in that distance and not `isCrouched`
+
+## progress
+5/22/2024
+I added score logic to the monster stuff script and also to the zombie states and I added weapon vendors script and state
+
+
+
+5/22/2024
+OK right now the game crashes when you use the Dog spawner because for whatever reason random generation **** is just not right.
+
+I can now extend round logic and I need to work on:
+
+- score logic
+    - player score
+    - zombie points system [wip]
+    - purchase weapons/ammo[wip]
+      - vendors
+      - animations
+      - sounds
+      - logic
+      - model
+    - totalscore
+    - highscore
+- d_zombieDoorProp0 
+  - It needs a model
+  - animations
+  - sounds
+  - ~logic~
+- e_dog
+  - logic
+    - For the most part logic is good right now and just attacks and runs away might need some tweaking
+  - animations
+  - model
+  - sounds
+- d_playerMetrognome
+  - logic
+- drops
+  - logic
+    - I think this is going to have to be intertwined with the player metronome because once a power up is active I want to set variables and then when it comes unactive I'm going to change those variables back so I'll probably have to do something like that.
+- guns
+  - guntlet
+  - pistol
+  - xbow
+  - staff
+  - fireball
+  - hammer
+  - sword
+   
+
+
 
 ## Game components
 

@@ -1,8 +1,12 @@
+//Lehmer.script
+//Based off the lemur random number generator
+//This is using an "unrolled" Version of a loop with four iterations
+//https://en.wikipedia.org/wiki/Lehmer_random_number_generator
 //a=3
 //c=10
 a=33
 m=251
-seed=4//X + 0
+seed=4 //X + 0
 accumulator=0
 
 accumulator+=$seed
@@ -11,3 +15,9 @@ accumulator%=$m //This is the PRNG.This becomes X + 1.
 
 accumulator+=$a
 accumulator%=$m //This is the PRNG.This becomes X + 2.
+
+accumulator+=$a
+accumulator%=$m //This is the PRNG.This becomes X + 3.
+
+accumulator+=$a
+accumulator%=$m //This is the PRNG.This becomes X + 4.

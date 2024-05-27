@@ -1,0 +1,26 @@
+//d_weapon0Vendor.script
+//This is the script behavior for the vendor that sits on the wall in the commercial game. Vendor referring to a vending unit rather than a shop.
+//$map.currentPlayerScore
+
+if $map.d_weapon0VendorState == "BUYWEAPON" {
+if $map.currentPlayerScore >= 1000 {
+give weapon 0
+map.currentPlayerScore-=1000
+map.d_weapon0VendorState="BUYAMMO"//todo
+map return
+}
+}
+
+
+if $map.d_weapon0VendorState == "BUYAMMO" {
+if $map.currentPlayerScore >= 200 {
+give ammo 0 30
+map.currentPlayerScore-=200
+map return
+}
+}
+
+
+//Regular map return so that the player can't hold down the E button
+//I actually don't know if this is how it is in commercial game
+map return

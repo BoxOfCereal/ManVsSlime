@@ -1,12 +1,6 @@
-IDLE,10
-SEE,10
-CHASE,10
-ATTACK,10
-HURT,10
-DEATH,10
-DEAD,10
-
 image e_zombie 0 69
+sound s_hurt0
+sound s_hurt1
 
 state IDLE NONE 0
 frame 0 0.25 0 0 0 NONE
@@ -30,15 +24,28 @@ frame 33 0.0625 0 0 0 ATTACK
 frame 34 0.25 0 0 0 NONE
 frame 39 0.25 0 0 0 READY
 
-state HURT CHASE 0
+state HURT NONE 0
 frame 40 0.25 0 0 0 NONE
+frame 49 0.25 0 0 0 JUMPIFEQUALS global.currentWeaponIndex 0 HURTBYWEAPON0
 frame 49 0.25 0 0 0 NONE
+
+state HURTBYWEAPON0 CHASE 0
+frame 50 0.25 0 0 0 NONE
+frame 49 0.25 0 0 0 INCREMENT map.maxPlayerScore 15
+frame 59 0.25 0 0 0 SOUND 0
+frame 1 0.25 0 0 0 CUSTOMPARTICLE 3 0.5 2,68,0 1,1,1 1 -0.25
+frame 59 0.25 0 0 0 READY
 
 state DEATH DEAD 0
 frame 50 0.25 0 0 0 NONE
-frame 51 0.25 0 0 0 NONE
 frame 52 0.25 0 0 0 INCREMENT map.thingsThatHaveBeenKilled 1
+frame 59 0.25 0 0 0 JUMPIFEQUALS global.currentWeaponIndex 0 DEATHBYWEAPON0
 frame 59 0.25 0 0 0 NONE
+
+state DEATHBYWEAPON0 DEAD 0
+frame 60 0.25 0 0 0 NONE
+frame 59 0.25 0 0 0 SOUND 0
+frame 59 0.25 0 0 0 READY
 
 state DEAD NONE 0
 frame 60 0.25 0 0 0 NONE
