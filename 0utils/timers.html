@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Timer Generator</title>
+    <style>
+        #preview {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .digit-img {
+            width: 32px;
+            height: 32px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Timer Generator</h1>
+    <input type="file" id="imageUpload" multiple accept="image/*">
+    <div id="preview"></div>
+    <input type="number" id="numberInput" placeholder="Enter a number" min="0">
+    <button onclick="generateImages()">Generate Images</button>
+    <br><br>
+    <a id="downloadLink" style="display: none;">Download ZIP</a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js"></script>
+    <script>
+        let digitImages = [];
+
+        document.getElementById('imageUpload').addEventListener('change', handleImageUpload);
+
+        function handleImageUpload(event) {
+            const files = event.target.files;
+            const preview = document.getElementById('preview');
+            preview.innerHTML = '';
+
+            for (let i = 0; i < files.length; i++) {
+                const file = files[i];
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const img = document.createElement('img');
+                    img.src = e.target.result;
+                    img.classList.add('digit-img');
+                    preview.appendChild(img);
+                    digitImages[i] = new Image();
+                    digitImages[i].src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function generateImages() {
+            const n = parseInt(document.getElementById('numberInput').value);
+            if (isNaN(n) || n < 0 || digitImages.length < 10) {
+                alert('Please upload all digit images and enter a valid number.');
+                return;
+            }
+
+            const zip = new JSZip();
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+
+            // Determine the maximum width based on the largest number
+            const maxDigits = n.toString().length;
+            const digitWidth = 32;
+            const digitHeight = 32;
+            const maxWidth = maxDigits * digitWidth;
+
+            canvas.width = maxWidth;
+            canvas.height = digitHeight;
+
+            for (let i = 0; i <= n; i++) {
+                const numberStr = i.toString();
+                const digits = numberStr.split('').map(d => parseInt(d));
+                const width = digits.length * digitWidth;
+
+                ctx.clearRect(0, 0, maxWidth, digitHeight);
+
+                // Center the number within the canvas
+                const offsetX = (maxWidth - width) / 2;
+
+                digits.forEach((digit, index) => {
+                    ctx.drawImage(digitImages[digit], offsetX + index * digitWidth, 0, digitWidth, digitHeight);
+                });
+
+                const dataURL = canvas.toDataURL('image/png');
+                const imgData = dataURL.split(',')[1];
+                zip.file(`timer${i}.png`, imgData, { base64: true });
+            }
+
+            zip.generateAsync({ type: 'blob' }).then(function(content) {
+                const downloadLink = document.getElementById('downloadLink');
+                downloadLink.href = URL.createObjectURL(content);
+                downloadLink.download = 'timer.zip';
+                downloadLink.style.display = 'inline';
+            });
+        }
+    </script>
+</body>
+</html>

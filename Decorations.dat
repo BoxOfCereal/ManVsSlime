@@ -14,14 +14,6 @@ d_metrognome 2
 -1
 -1
 16 1 0 0 0
-d_zombieDoorZombie0_1 3
-100
-1
-1
-1
--1
--1
-16 1 0 0 1
 d_zombieDoorLogic0 4
 100
 0
@@ -30,30 +22,6 @@ d_zombieDoorLogic0 4
 -1
 -1
 16 1 0 0 0
-d_zombieDoorZombie0_2 5
-100
-0
-1
-1
--1
--1
-16 1 0 0 1
-d_zombieDoorZombie0_3 6
-100
-0
-1
-1
--1
--1
-16 1 0 0 1
-d_zombieDoorZombie0_4 7
-100
-0
-1
-1
--1
--1
-16 1 0 0 1
 d_portalWin 8
 100
 0

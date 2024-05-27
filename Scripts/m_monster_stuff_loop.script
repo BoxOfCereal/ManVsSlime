@@ -5,6 +5,7 @@ status "monstersLeft $map.monstersLeftToBeSpawned NextRound : $map.ticksToNextRo
 //status "$map.zombieDoor0_HP , $map.tickSwitch, map.zombieDoor0_Zombies: $map.zombieDoor0_Zombies , "  .5 
 //status "map.killZombieDoorZeroZombieOne: $map.killZombieDoorZeroZombieOne" 1
 //timer and hud TODO
+hud image timer 0.50 0.05 3 HUD/timer$map.ticksToNextRound.png
 //tick logic MUST BE LAST
 if "$map.tickSwitch" == 1 {
 map.tickSwitch=0

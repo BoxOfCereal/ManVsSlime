@@ -35,7 +35,9 @@ map.ticksSinceMapStart=0
 //Could probably do frames since last tick to figure out some kind of delta
 
 //doors
-map.door0IsUnlocked=0
+map.door0IsUnlocked=1
+map.door1IsUnlocked=0
+map.door2IsUnlocked=0
 
 //player
 global.currentWeaponIndex=0
