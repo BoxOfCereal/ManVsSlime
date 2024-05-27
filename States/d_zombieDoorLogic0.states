@@ -36,7 +36,7 @@ frame 20 0.25 0 0 0 NONE
 frame 21 0.25 0 0 0 JUMPIFEQUALS map.monstersLeftToBeSpawned 0 NOTHING
 frame 22 0.25 0 0 0 SETVAR map.zombieDoorLogicState "SPAWNZOMBIE0"
 frame 23 0.25 0 0 0 INCREMENT map.zombieDoor0_Zombies 1
-frame 24 0.25 0 0 0 SPAWN d_zombieDoorZombie0_1 -32,0,-32 0,0
+frame 24 0.25 0 0 0 SPAWN e_zombieDoorZombie0_1 -32,0,-32 0,0
 frame 25 0.25 0 0 0 DECREMENT map.monstersLeftToBeSpawned 1
 frame 26 0.25 0 0 0 INCREMENT map.monsterCountZombies 1
 frame 27 0.25 0 0 0 READY
@@ -46,7 +46,7 @@ frame 28 0.25 0 0 0 NONE
 frame 29 0.25 0 0 0 JUMPIFEQUALS map.monstersLeftToBeSpawned 0 NOTHING
 frame 30 0.25 0 0 0 SETVAR map.zombieDoorLogicState "SPAWNZOMBIE1"
 frame 31 0.25 0 0 0 INCREMENT map.zombieDoor0_Zombies 1
-frame 32 0.25 0 0 0 SPAWN d_zombieDoorZombie0_2 -16,0,-32 0,0
+frame 32 0.25 0 0 0 SPAWN e_zombieDoorZombie0_2 -16,0,-32 0,0
 frame 33 0.25 0 0 0 DECREMENT map.monstersLeftToBeSpawned 1
 frame 34 0.25 0 0 0 INCREMENT map.monsterCountZombies 1
 frame 35 0.25 0 0 0 READY
@@ -56,7 +56,7 @@ frame 36 0.25 0 0 0 NONE
 frame 37 0.25 0 0 0 JUMPIFEQUALS map.monstersLeftToBeSpawned 0 NOTHING
 frame 38 0.25 0 0 0 SETVAR map.zombieDoorLogicState "SPAWNZOMBIE2"
 frame 39 0.25 0 0 0 INCREMENT map.zombieDoor0_Zombies 1
-frame 40 0.25 0 0 0 SPAWN d_zombieDoorZombie0_3 0,0,-32 0,0
+frame 40 0.25 0 0 0 SPAWN e_zombieDoorZombie0_3 0,0,-32 0,0
 frame 41 0.25 0 0 0 DECREMENT map.monstersLeftToBeSpawned 1
 frame 42 0.25 0 0 0 INCREMENT map.monsterCountZombies 1
 frame 43 0.25 0 0 0 READY
@@ -66,7 +66,7 @@ frame 44 0.25 0 0 0 NONE
 frame 45 0.25 0 0 0 JUMPIFEQUALS map.monstersLeftToBeSpawned 0 NOTHING
 frame 46 0.25 0 0 0 SETVAR map.zombieDoorLogicState "SPAWNZOMBIE3"
 frame 47 0.25 0 0 0 INCREMENT map.zombieDoor0_Zombies 1
-frame 48 0.25 0 0 0 SPAWN d_zombieDoorZombie0_4 16,0,-32 0,0
+frame 48 0.25 0 0 0 SPAWN e_zombieDoorZombie0_4 16,0,-32 0,0
 frame 49 0.25 0 0 0 DECREMENT map.monstersLeftToBeSpawned 1
 frame 50 0.25 0 0 0 INCREMENT map.monsterCountZombies 1
 frame 51 0.25 0 0 0 READY
