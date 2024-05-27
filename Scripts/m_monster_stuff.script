@@ -22,7 +22,7 @@ map.monstersLeftToBeSpawned=0
 map.thingsThatHaveBeenKilled=0
 
 
-/round logic
+//round logic
 map.baseTicksTillIntroEnd=5
 map.baseTicksTillBreakEnd=11
 map.nameOfCurrentRound="Round 0"
@@ -34,6 +34,8 @@ map.ticksToNextRound=5
 map.ticksSinceMapStart=0
 //Could probably do frames since last tick to figure out some kind of delta
 
+//doors
+map.door0IsUnlocked=0
 
 //player
 global.currentWeaponIndex=0
