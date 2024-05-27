@@ -1,6 +1,11 @@
  I thought about doing something like this myself by taking the coordinates of the player in predefined coordinates on the map somewhere and then checking the distance and if the player is in that distance and not `isCrouched`
 
 ## progress
+
+5/27/2024
+Committed a bunch of stuff
+
+
 5/22/2024
 I added score logic to the monster stuff script and also to the zombie states and I added weapon vendors script and state
 
@@ -11,6 +16,12 @@ OK right now the game crashes when you use the Dog spawner because for whatever 
 
 I can now extend round logic and I need to work on:
 
+- HUD
+  - score
+  - round
+  - round timer
+  - player health
+  - power up
 - score logic
     - player score
     - zombie points system [wip]
@@ -47,7 +58,7 @@ I can now extend round logic and I need to work on:
   - hammer
   - sword
    
-
+To get the one hit KO working I have to use a variable flag and then in a state machine that has a count timer for it and then inside decorations I have to check it blast hp is lower than this hp then sticking damage and then I can go to the take damage stay and then I can check if it's instant kill
 
 
 ## Game components
