@@ -1,0 +1,36 @@
+image d_metrognome_1hko 0 19
+
+state IDLE TICK 0
+frame 0 0.25 0 0 0 NONE
+frame 1 0.25 0 0 0 HUDIMG ti 0.25 0.25 2 HUD\Custom1.png
+frame 2 0.25 0 0 0 READY
+
+state TICK NONE 0
+frame 3 0.25 0 0 0 NONE
+frame 4 0.25 0 0 0 JUMPIFEQUALS map.powerUpInstantKillPickup 1 1HKOSETUP
+frame 5 0.25 0 0 0 NONE
+
+state 1HKOSETUP 1HKOTICK 0
+frame 6 0.25 0 0 0 NONE
+frame 7 0.25 0 0 0 SETVAR map.powerUpTimer $map.basePowerUpTimer
+frame 8 0.25 0 0 0 SETVAR map.powerUpInstantKillPickup 0
+frame 9 0.25 0 0 0 SETVAR map.powerUpInstantKillFlag 1
+
+state 1HKOTICK NONE 0
+frame 10 0.25 0 0 0 NONE
+frame 11 0.25 0 0 0 DECREMENT map.powerUpTimer 1
+frame 12 0.25 0 0 0 CLAMP map.powerUpTimer 0 100
+frame 13 0.25 0 0 0 JUMPIFLEQUALS map.powerUpTimer 1 CLEANUP
+
+state CLEANUP TICK 0
+frame 14 0.25 0 0 0 NONE
+frame 15 0.25 0 0 0 SETVAR map.powerUpInstantKillFlag 0
+
+state DEATH DEAD 0
+frame 16 0.25 0 0 0 NONE
+frame 17 0.25 0 0 0 INCREMENT map.thingsThatHaveBeenKilled 1
+frame 18 0.25 0 0 0 NONE
+
+state DEAD NONE 0
+frame 19 0.25 0 0 0 NONE
+frame 20 0.25 0 0 0 NONE

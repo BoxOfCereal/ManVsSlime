@@ -1,0 +1,5 @@
+map.powerUpInstantKillPickup=0
+map.powerUpInstantKillPickup+=1
+
+entity delete me 
+map return

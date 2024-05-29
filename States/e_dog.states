@@ -34,7 +34,7 @@ frame 19 0.25 0 0 0 NONE
 
 state HURTBYWEAPON0 CHASE 0
 frame 20 0.25 0 0 0 NONE
-frame 21 0.25 0 0 0 JUMPIFEQUALS map.powerUpInstantKill 1 DEATHBYWEAPON0
+frame 21 0.25 0 0 0 JUMPIFEQUALS map.powerUpInstantKillFlag 1 DEATHBYWEAPON0
 frame 22 0.25 0 0 0 INCREMENT map.currentPlayerScore 15
 frame 23 0.25 0 0 0 SOUND 0
 frame 24 0.25 0 0 0 CUSTOMPARTICLE 3 0.5 2,68,0 1,1,1 1 -0.25

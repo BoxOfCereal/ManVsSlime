@@ -1,0 +1,5 @@
+vn 1
+
+text "Instant Kill: $map.powerUpInstantKillPickup,timer $map.powerUpTimer, flag $map.powerUpInstantKillFlag" 255 255 255
+vn 0
+map return

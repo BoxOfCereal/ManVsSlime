@@ -1,0 +1,10 @@
+//d_p_maxAmmo.script
+//weapon bullets [slot] [value] - sets the bullet count of weapon[slot] to [value]
+weapon bullets 0 $global.weapon0MaxBullets
+weapon bullets 1 $global.weapon1MaxBullets
+weapon bullets 2 $global.weapon2MaxBullets
+weapon bullets 3 $global.weapon3MaxBullets
+weapon bullets 4 $global.weapon4MaxBullets
+weapon bullets 5 $global.weapon5MaxBullets
+entity delete me
+map return

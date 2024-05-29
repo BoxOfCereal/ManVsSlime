@@ -52,6 +52,18 @@ map.currentPlayerScore=0
 map.maxPlayerScore=0
 map.playerScoreScale=1
 
+// power up
+map.powerUpInstantKillFlag=0
+map.powerUpInstantKillPickup=0
+map.basePowerUpTimer=10
+
+//weapons
+global.weapon0MaxBullets=10
+global.weapon1MaxBullets=10
+global.weapon2MaxBullets=10
+global.weapon3MaxBullets=10
+global.weapon4MaxBullets=10
+global.weapon5MaxBullets=10
 
 //This is the stuff for the player again no data structures so it's just a mess of variables
 map start
