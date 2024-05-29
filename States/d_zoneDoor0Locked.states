@@ -1,0 +1,18 @@
+image d_zoneDoor 0 3
+
+state IDLE LOCKED 0
+frame 0 0.25 0 0 0 NONE
+
+state LOCKED NONE 0
+frame 0 0.25 0 0 0 NONE
+frame 0 0.25 0 0 0 NONE
+frame 0 0.25 0 0 0 JUMPIFEQUALS map.door0IsUnlocked 0 DEATH
+
+state DEATH DEAD 0
+frame 1 0.25 0 0 0 NONE
+frame 2 0.25 0 0 0 SPAWN d_zoneDoor0Unlocked 0,0,0 0,0
+frame 3 0.25 0 0 0 NONE
+
+state DEAD NONE 0
+frame 3 0.25 0 0 0 NONE
+frame 3 0.25 0 0 0 NONE

@@ -1,0 +1,14 @@
+//d_zoneDoor0.script
+//This is the logic for the door That separates rooms In the commercial game.
+
+if $map.door0IsUnlocked == 0 {
+if $map.currentPlayerScore >= $map.door0UnlockCost {
+map.door0IsUnlocked=1
+map.currentPlayerScore-=1000
+map return
+}
+}
+
+
+//Regular map return so that the player can't hold down the E button
+map return

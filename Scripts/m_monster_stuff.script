@@ -39,6 +39,10 @@ map.door0IsUnlocked=1
 map.door1IsUnlocked=0
 map.door2IsUnlocked=0
 
+map.door0UnlockCost=0
+map.door1UnlockCost=1
+map.door2UnlockCost=2
+
 //player
 global.currentWeaponIndex=0
 map.currentPlayerScore=0

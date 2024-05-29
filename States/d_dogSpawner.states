@@ -11,8 +11,7 @@ frame 3 0.25 0 0 0 JUMPIFEQUALS map.spawnDogsSwitch 1 TICK
 state TICK NONE 0
 frame 4 0.25 0 0 0 NONE
 frame 5 0.25 0 0 0 JUMPIFEQUALS map.spawnDogsSwitch 0 NOTHING
-frame 6 0.25 0 0 0 SETVAR randomNumber RANDOM(0,100)
-frame 7 0.25 0 0 0 SPAWN d_dogPortal $randomNumber,0,32 0,0
+frame 7 0.25 0 0 0 SPAWN d_dogPortal 32,0,32 0,0
 frame 8 0.25 0 0 0 NONE
 
 state DEATH DEAD 0
