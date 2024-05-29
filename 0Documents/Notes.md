@@ -52,6 +52,9 @@ I can now extend round logic and I need to work on:
 - drops
   - logic
     - I think this is going to have to be intertwined with the player metronome because once a power up is active I want to set variables and then when it comes unactive I'm going to change those variables back so I'll probably have to do something like that.
+  - 1hko
+    - logic [finished]
+      - 📁`Scripts\d_p_1hko.script` Flips a switch that activates 📁`States\d_metrognome_1hko.states`. `States\d_metrognome_1hko.states` Keeps track of a timer that counts down until one hit KO is over. As a consequence of the architecture the player can pick up an extra one hit KO to have "buffer" That will reactivate when the current one hit KO runs out. However, this does not stack any others put on top of this buffer will be lost.
 - guns
   - guntlet
   - pistol
