@@ -15,6 +15,9 @@ map.killZombieDoorZeroZombieThree=0
 map.killZombieDoorZeroZombieTwo=0
 map.killZombieDoorZeroZombieOne=0
 
+//dog spawner settings
+map.baseDogsPerSpawner=3
+
 //map stats
 map.monsterCountZombies=0
 map.baseMonstersToSpawn=3

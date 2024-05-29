@@ -38,6 +38,9 @@ I can now extend round logic and I need to work on:
   - animations
   - sounds
   - ~logic~
+- d_dogSpawner
+  - logic
+    - `d_dogSpawner0.states` The way it's set up now is that there's a spawner corresponding to which zone has been unlocked in this case we have zero. The formula for the dog spawners goes as such: `b + (b * r / 3)` where `b` is the `base number of dogs` and `r` is the `number of rounds`. The `base number of dogs` is `map.baseDogsPerSpawner` and `number of rounds` is `map.currentRound` Both located in the monster stuff script what's handy is that because rounds will always be the visible by three I don't have to bother with floating points. AND, Because the first round is actually round six in the back end that means that it'll be `base` `*` `3 / 6` which is `2` which means it'll be `six dogs per spawner` on the `first dog round`.
 - e_dog
   - logic
     - For the most part logic is good right now and just attacks and runs away might need some tweaking

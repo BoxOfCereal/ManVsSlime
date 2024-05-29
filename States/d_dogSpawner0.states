@@ -6,11 +6,19 @@ frame 1 0.25 0 0 0 READY
 
 state NOTHING NONE 0
 frame 2 0.25 0 0 0 NONE
+frame 3 0.25 0 0 0 SETVAR dogsToBeSpawned 0
+frame 3 0.25 0 0 0 INCREMENT dogsToBeSpawned $map.baseDogsPerSpawner
+frame 3 0.25 0 0 0 SETVAR scaler 0
+frame 3 0.25 0 0 0 INCREMENT scaler $map.currentRound
+frame 3 0.25 0 0 0 DIVIDE scaler 3
+frame 3 0.25 0 0 0 MULTIPLY scaler dogsToBeSpawned
+frame 3 0.25 0 0 0 INCREMENT dogsToBeSpawned $scaler
 frame 3 0.25 0 0 0 JUMPIFEQUALS map.spawnDogsSwitch 1 TICK
 
 state TICK NONE 0
 frame 4 0.25 0 0 0 NONE
 frame 5 0.25 0 0 0 JUMPIFEQUALS map.spawnDogsSwitch 0 NOTHING
+frame 5 0.25 0 0 0 JUMPIFEQUALS map.door0IsUnlocked 0 NOTHING
 frame 7 0.25 0 0 0 SPAWN d_dogPortal 32,0,32 0,0
 frame 8 0.25 0 0 0 NONE
 

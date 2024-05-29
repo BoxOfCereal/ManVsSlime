@@ -30,7 +30,7 @@ d_portalWin 8
 -1
 -1
 16 1 0 0 0
-d_dogSpawner 9
+d_dogSpawner0 9
 100
 0
 0
@@ -45,7 +45,7 @@ d_dogPortal 10
 1
 -1
 -1
-16 1 0 0 0
+16 1 0 0 1
 d_metrognomePlayer 11
 100
 0
