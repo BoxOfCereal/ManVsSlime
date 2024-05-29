@@ -40,176 +40,176 @@ frame 30 0.25 0 0 0 JUMPIFEQUALS map.currentRound 18 ROUND9DOG
 frame 31 0.25 0 0 0 JUMPIFEQUALS map.currentRound 19 ROUND9BREAK
 frame 32 0.25 0 0 0 JUMPIFEQUALS map.currentRound 20 ROUND10
 frame 33 0.25 0 0 0 JUMPIFEQUALS map.currentRound 21 ROUND10BREAK
-frame 22 0.25 0 0 0 NONE
+frame 34 0.25 0 0 0 NONE
 
 state INTRO TICK 0
-frame 23 0.25 0 0 0 NONE
-frame 24 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 0 Intro"
-frame 25 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksTillIntroEnd
-frame 26 0.25 0 0 0 NONE
+frame 35 0.25 0 0 0 NONE
+frame 36 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 0 Intro"
+frame 37 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksTillIntroEnd
+frame 38 0.25 0 0 0 NONE
 
 state ROUND1 TICK 0
-frame 27 0.25 0 0 0 NONE
-frame 28 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 1"
-frame 29 0.25 0 0 0 INCREMENT map.baseTicksToNextRound 1
-frame 30 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksToNextRound
-frame 31 0.25 0 0 0 INCREMENT map.baseMonstersToSpawn 3
-frame 32 0.25 0 0 0 INCREMENT map.monstersLeftToBeSpawned $map.baseMonstersToSpawn
+frame 39 0.25 0 0 0 NONE
+frame 40 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 1"
+frame 41 0.25 0 0 0 INCREMENT map.baseTicksToNextRound 1
+frame 42 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksToNextRound
+frame 43 0.25 0 0 0 INCREMENT map.baseMonstersToSpawn 3
+frame 44 0.25 0 0 0 INCREMENT map.monstersLeftToBeSpawned $map.baseMonstersToSpawn
 
 state ROUND1BREAK TICK 0
-frame 33 0.25 0 0 0 NONE
-frame 34 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 1 break"
-frame 35 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksTillBreakEnd
-frame 36 0.25 0 0 0 NONE
+frame 45 0.25 0 0 0 NONE
+frame 46 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 1 break"
+frame 47 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksTillBreakEnd
+frame 48 0.25 0 0 0 NONE
 
 state ROUND2 TICK 0
-frame 37 0.25 0 0 0 NONE
-frame 38 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 2"
-frame 39 0.25 0 0 0 INCREMENT map.baseTicksToNextRound 1
-frame 40 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksToNextRound
-frame 41 0.25 0 0 0 INCREMENT map.baseMonstersToSpawn 3
-frame 42 0.25 0 0 0 INCREMENT map.monstersLeftToBeSpawned $map.baseMonstersToSpawn
+frame 49 0.25 0 0 0 NONE
+frame 50 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 2"
+frame 51 0.25 0 0 0 INCREMENT map.baseTicksToNextRound 1
+frame 52 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksToNextRound
+frame 53 0.25 0 0 0 INCREMENT map.baseMonstersToSpawn 3
+frame 54 0.25 0 0 0 INCREMENT map.monstersLeftToBeSpawned $map.baseMonstersToSpawn
 
 state ROUND2BREAK IDLE 0
-frame 43 0.25 0 0 0 NONE
-frame 44 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 2 break"
-frame 45 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksTillBreakEnd
-frame 46 0.25 0 0 0 NONE
+frame 55 0.25 0 0 0 NONE
+frame 56 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 2 break"
+frame 57 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksTillBreakEnd
+frame 58 0.25 0 0 0 NONE
 
 state ROUND3DOG TICK 0
-frame 47 0.25 0 0 0 NONE
-frame 48 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 3 (DOGS)"
-frame 49 0.25 0 0 0 INCREMENT map.baseTicksToNextRound 1
-frame 50 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksToNextRound
-frame 51 0.25 0 0 0 INCREMENT map.baseMonstersToSpawn 3
-frame 52 0.25 0 0 0 INCREMENT map.monstersLeftToBeSpawned $map.baseMonstersToSpawn
-frame 53 0.25 0 0 0 SETVAR map.spawnDogsSwitch 1
+frame 59 0.25 0 0 0 NONE
+frame 60 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 3 (DOGS)"
+frame 61 0.25 0 0 0 INCREMENT map.baseTicksToNextRound 1
+frame 62 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksToNextRound
+frame 63 0.25 0 0 0 INCREMENT map.baseMonstersToSpawn 3
+frame 64 0.25 0 0 0 INCREMENT map.monstersLeftToBeSpawned $map.baseMonstersToSpawn
+frame 65 0.25 0 0 0 SETVAR map.spawnDogsSwitch 1
 
 state ROUND3BREAK TICK 0
-frame 54 0.25 0 0 0 NONE
-frame 55 0.25 0 0 0 SETVAR map.spawnDogsSwitch 0
-frame 56 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 3 break"
-frame 57 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksTillBreakEnd
-frame 58 0.25 0 0 0 NONE
+frame 66 0.25 0 0 0 NONE
+frame 67 0.25 0 0 0 SETVAR map.spawnDogsSwitch 0
+frame 68 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 3 break"
+frame 69 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksTillBreakEnd
+frame 70 0.25 0 0 0 NONE
 
 state ROUND4 TICK 0
-frame 59 0.25 0 0 0 NONE
-frame 48 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 4"
-frame 60 0.25 0 0 0 INCREMENT map.baseTicksToNextRound 1
-frame 61 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksToNextRound
-frame 62 0.25 0 0 0 INCREMENT map.baseMonstersToSpawn 3
-frame 63 0.25 0 0 0 INCREMENT map.monstersLeftToBeSpawned $map.baseMonstersToSpawn
+frame 71 0.25 0 0 0 NONE
+frame 72 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 4"
+frame 73 0.25 0 0 0 INCREMENT map.baseTicksToNextRound 1
+frame 74 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksToNextRound
+frame 75 0.25 0 0 0 INCREMENT map.baseMonstersToSpawn 3
+frame 76 0.25 0 0 0 INCREMENT map.monstersLeftToBeSpawned $map.baseMonstersToSpawn
 
 state ROUND4BREAK TICK 0
-frame 64 0.25 0 0 0 NONE
-frame 65 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 4 break"
-frame 66 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksTillBreakEnd
-frame 67 0.25 0 0 0 NONE
+frame 77 0.25 0 0 0 NONE
+frame 78 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 4 break"
+frame 79 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksTillBreakEnd
+frame 80 0.25 0 0 0 NONE
 
 state ROUND5 TICK 0
-frame 59 0.25 0 0 0 NONE
-frame 48 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 5"
-frame 60 0.25 0 0 0 INCREMENT map.baseTicksToNextRound 1
-frame 61 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksToNextRound
-frame 62 0.25 0 0 0 INCREMENT map.baseMonstersToSpawn 3
-frame 63 0.25 0 0 0 INCREMENT map.monstersLeftToBeSpawned $map.baseMonstersToSpawn
+frame 81 0.25 0 0 0 NONE
+frame 82 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 5"
+frame 83 0.25 0 0 0 INCREMENT map.baseTicksToNextRound 1
+frame 84 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksToNextRound
+frame 85 0.25 0 0 0 INCREMENT map.baseMonstersToSpawn 3
+frame 86 0.25 0 0 0 INCREMENT map.monstersLeftToBeSpawned $map.baseMonstersToSpawn
 
 state ROUND5BREAK TICK 0
-frame 64 0.25 0 0 0 NONE
-frame 65 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 5 break"
-frame 66 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksTillBreakEnd
-frame 67 0.25 0 0 0 NONE
+frame 87 0.25 0 0 0 NONE
+frame 88 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 5 break"
+frame 89 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksTillBreakEnd
+frame 90 0.25 0 0 0 NONE
 
 state ROUND6DOG TICK 0
-frame 47 0.25 0 0 0 NONE
-frame 48 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 6 (DOGS)"
-frame 49 0.25 0 0 0 INCREMENT map.baseTicksToNextRound 1
-frame 50 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksToNextRound
-frame 51 0.25 0 0 0 INCREMENT map.baseMonstersToSpawn 3
-frame 52 0.25 0 0 0 INCREMENT map.monstersLeftToBeSpawned $map.baseMonstersToSpawn
-frame 53 0.25 0 0 0 SETVAR map.spawnDogsSwitch 1
+frame 91 0.25 0 0 0 NONE
+frame 92 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 6 (DOGS)"
+frame 93 0.25 0 0 0 INCREMENT map.baseTicksToNextRound 1
+frame 94 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksToNextRound
+frame 95 0.25 0 0 0 INCREMENT map.baseMonstersToSpawn 3
+frame 96 0.25 0 0 0 INCREMENT map.monstersLeftToBeSpawned $map.baseMonstersToSpawn
+frame 97 0.25 0 0 0 SETVAR map.spawnDogsSwitch 1
 
 state ROUND6BREAK TICK 0
-frame 54 0.25 0 0 0 NONE
-frame 55 0.25 0 0 0 SETVAR map.spawnDogsSwitch 0
-frame 56 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 6 break"
-frame 57 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksTillBreakEnd
-frame 58 0.25 0 0 0 NONE
+frame 98 0.25 0 0 0 NONE
+frame 99 0.25 0 0 0 SETVAR map.spawnDogsSwitch 0
+frame 100 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 6 break"
+frame 101 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksTillBreakEnd
+frame 102 0.25 0 0 0 NONE
 
 state ROUND7 TICK 0
-frame 59 0.25 0 0 0 NONE
-frame 48 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 7"
-frame 60 0.25 0 0 0 INCREMENT map.baseTicksToNextRound 1
-frame 61 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksToNextRound
-frame 62 0.25 0 0 0 INCREMENT map.baseMonstersToSpawn 3
-frame 63 0.25 0 0 0 INCREMENT map.monstersLeftToBeSpawned $map.baseMonstersToSpawn
+frame 103 0.25 0 0 0 NONE
+frame 104 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 7"
+frame 105 0.25 0 0 0 INCREMENT map.baseTicksToNextRound 1
+frame 106 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksToNextRound
+frame 107 0.25 0 0 0 INCREMENT map.baseMonstersToSpawn 3
+frame 108 0.25 0 0 0 INCREMENT map.monstersLeftToBeSpawned $map.baseMonstersToSpawn
 
 state ROUND7BREAK TICK 0
-frame 64 0.25 0 0 0 NONE
-frame 65 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 7 break"
-frame 66 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksTillBreakEnd
-frame 67 0.25 0 0 0 NONE
+frame 109 0.25 0 0 0 NONE
+frame 110 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 7 break"
+frame 111 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksTillBreakEnd
+frame 112 0.25 0 0 0 NONE
 
 state ROUND8 TICK 0
-frame 59 0.25 0 0 0 NONE
-frame 48 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 8"
-frame 60 0.25 0 0 0 INCREMENT map.baseTicksToNextRound 1
-frame 61 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksToNextRound
-frame 62 0.25 0 0 0 INCREMENT map.baseMonstersToSpawn 3
-frame 63 0.25 0 0 0 INCREMENT map.monstersLeftToBeSpawned $map.baseMonstersToSpawn
+frame 113 0.25 0 0 0 NONE
+frame 114 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 8"
+frame 115 0.25 0 0 0 INCREMENT map.baseTicksToNextRound 1
+frame 116 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksToNextRound
+frame 117 0.25 0 0 0 INCREMENT map.baseMonstersToSpawn 3
+frame 118 0.25 0 0 0 INCREMENT map.monstersLeftToBeSpawned $map.baseMonstersToSpawn
 
 state ROUND8BREAK TICK 0
-frame 64 0.25 0 0 0 NONE
-frame 65 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 8 break"
-frame 66 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksTillBreakEnd
-frame 67 0.25 0 0 0 NONE
+frame 119 0.25 0 0 0 NONE
+frame 120 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 8 break"
+frame 121 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksTillBreakEnd
+frame 122 0.25 0 0 0 NONE
 
 state ROUND9DOG TICK 0
-frame 47 0.25 0 0 0 NONE
-frame 48 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 9 (DOGS)"
-frame 49 0.25 0 0 0 INCREMENT map.baseTicksToNextRound 1
-frame 50 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksToNextRound
-frame 51 0.25 0 0 0 INCREMENT map.baseMonstersToSpawn 3
-frame 52 0.25 0 0 0 INCREMENT map.monstersLeftToBeSpawned $map.baseMonstersToSpawn
-frame 53 0.25 0 0 0 SETVAR map.spawnDogsSwitch 1
+frame 123 0.25 0 0 0 NONE
+frame 124 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 9 (DOGS)"
+frame 125 0.25 0 0 0 INCREMENT map.baseTicksToNextRound 1
+frame 126 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksToNextRound
+frame 127 0.25 0 0 0 INCREMENT map.baseMonstersToSpawn 3
+frame 128 0.25 0 0 0 INCREMENT map.monstersLeftToBeSpawned $map.baseMonstersToSpawn
+frame 129 0.25 0 0 0 SETVAR map.spawnDogsSwitch 1
 
 state ROUND9BREAK TICK 0
-frame 54 0.25 0 0 0 NONE
-frame 55 0.25 0 0 0 SETVAR map.spawnDogsSwitch 0
-frame 56 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 9 break"
-frame 57 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksTillBreakEnd
-frame 58 0.25 0 0 0 NONE
+frame 130 0.25 0 0 0 NONE
+frame 131 0.25 0 0 0 SETVAR map.spawnDogsSwitch 0
+frame 132 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 9 break"
+frame 133 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksTillBreakEnd
+frame 134 0.25 0 0 0 NONE
 
 state ROUND10 TICK 0
-frame 59 0.25 0 0 0 NONE
-frame 48 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 10"
-frame 60 0.25 0 0 0 INCREMENT map.baseTicksToNextRound 1
-frame 61 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksToNextRound
-frame 62 0.25 0 0 0 INCREMENT map.baseMonstersToSpawn 3
-frame 63 0.25 0 0 0 INCREMENT map.monstersLeftToBeSpawned $map.baseMonstersToSpawn
+frame 135 0.25 0 0 0 NONE
+frame 136 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 10"
+frame 137 0.25 0 0 0 INCREMENT map.baseTicksToNextRound 1
+frame 138 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksToNextRound
+frame 139 0.25 0 0 0 INCREMENT map.baseMonstersToSpawn 3
+frame 140 0.25 0 0 0 INCREMENT map.monstersLeftToBeSpawned $map.baseMonstersToSpawn
 
 state ROUND10BREAK TICK 0
-frame 64 0.25 0 0 0 NONE
-frame 65 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 10 break"
-frame 66 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksTillBreakEnd
-frame 67 0.25 0 0 0 NONE
+frame 141 0.25 0 0 0 NONE
+frame 142 0.25 0 0 0 SETVAR map.nameOfCurrentRound "Round 10 break"
+frame 143 0.25 0 0 0 INCREMENT map.ticksToNextRound $map.baseTicksTillBreakEnd
+frame 144 0.25 0 0 0 NONE
 
 state WIN IDLE 0
-frame 64 0.25 0 0 0 NONE
-frame 65 0.25 0 0 0 SOUND 0
-frame 66 0.25 0 0 0 CUSTOMPARTICLE 72 0.5 2,120,0 1,1,1 1 -0.25
-frame 67 0.25 0 0 0 CUSTOMPARTICLE 72 0.5 2,120,0 1,1,1 1 -0.25
-frame 68 0.25 0 0 0 CUSTOMPARTICLE 72 0.5 2,120,0 1,1,1 1 -0.25
-frame 69 0.25 0 0 0 CUSTOMPARTICLE 72 0.5 2,120,0 1,1,1 1 -0.25
-frame 70 0.25 0 0 0 CUSTOMPARTICLE 72 0.5 2,120,0 1,1,1 1 -0.25
-frame 71 0.25 0 0 0 SPAWN d_portal_1 0,0,64 0,0
-frame 72 0.25 0 0 0 NONE
+frame 145 0.25 0 0 0 NONE
+frame 146 0.25 0 0 0 SOUND 0
+frame 147 0.25 0 0 0 CUSTOMPARTICLE 72 0.5 2,120,0 1,1,1 1 -0.25
+frame 148 0.25 0 0 0 CUSTOMPARTICLE 72 0.5 2,120,0 1,1,1 1 -0.25
+frame 149 0.25 0 0 0 CUSTOMPARTICLE 72 0.5 2,120,0 1,1,1 1 -0.25
+frame 150 0.25 0 0 0 CUSTOMPARTICLE 72 0.5 2,120,0 1,1,1 1 -0.25
+frame 151 0.25 0 0 0 CUSTOMPARTICLE 72 0.5 2,120,0 1,1,1 1 -0.25
+frame 152 0.25 0 0 0 SPAWN d_portal_1 0,0,64 0,0
+frame 153 0.25 0 0 0 NONE
 
 state DEATH DEAD 0
-frame 73 0.166 0 0 0 NONE
-frame 74 0.166 0 0 0 NONE
-frame 75 0.166 0 0 0 NONE
+frame 154 0.166 0 0 0 NONE
+frame 155 0.166 0 0 0 NONE
+frame 156 0.166 0 0 0 NONE
 
 state DEAD NONE 0
-frame 76 0.25 0 0 0 NONE
-frame 77 0.25 0 0 0 NONE
+frame 157 0.25 0 0 0 NONE
+frame 158 0.25 0 0 0 NONE
