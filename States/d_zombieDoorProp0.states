@@ -67,40 +67,40 @@ frame 37 0.25 0 0 0 READY
 
 state SPAWNZOMBIE 0DESTROYED 0
 frame 38 0.25 0 0 0 NONE
-frame 40 0.25 0 0 0 JUMPIFEQUALS map.IsZombieDoorZeroZombieOneAlive 1 REMOVEZOMBIEONE
-frame 41 0.25 0 0 0 JUMPIFEQUALS map.IsZombieDoorZeroZombieTwoAlive 1 REMOVEZOMBIETWO
-frame 42 0.25 0 0 0 JUMPIFEQUALS map.IsZombieDoorZeroZombieThreeAlive 1 REMOVEZOMBIETHREE
-frame 43 0.25 0 0 0 JUMPIFEQUALS map.IsZombieDoorZeroZombieFourAlive 1 REMOVEZOMBIEFOUR
-frame 46 0.25 0 0 0 READY
+frame 39 0.25 0 0 0 JUMPIFEQUALS map.IsZombieDoorZeroZombieOneAlive 1 REMOVEZOMBIEONE
+frame 40 0.25 0 0 0 JUMPIFEQUALS map.IsZombieDoorZeroZombieTwoAlive 1 REMOVEZOMBIETWO
+frame 41 0.25 0 0 0 JUMPIFEQUALS map.IsZombieDoorZeroZombieThreeAlive 1 REMOVEZOMBIETHREE
+frame 42 0.25 0 0 0 JUMPIFEQUALS map.IsZombieDoorZeroZombieFourAlive 1 REMOVEZOMBIEFOUR
+frame 43 0.25 0 0 0 READY
 
 state REMOVEZOMBIEFOUR 0DESTROYED 0
-frame 47 0.25 0 0 0 NONE
-frame 49 0.25 0 0 0 SETVAR map.killZombieDoorZeroZombieFour 1
+frame 44 0.25 0 0 0 NONE
+frame 45 0.25 0 0 0 SETVAR map.killZombieDoorZeroZombieFour 1
+frame 46 0.25 0 0 0 SPAWN e_zombie 0,0,-32 0,0
+frame 47 0.25 0 0 0 READY
+
+state REMOVEZOMBIETHREE 0DESTROYED 0
+frame 48 0.25 0 0 0 NONE
+frame 49 0.25 0 0 0 SETVAR map.killZombieDoorZeroZombieThree 1
 frame 50 0.25 0 0 0 SPAWN e_zombie 0,0,-32 0,0
 frame 51 0.25 0 0 0 READY
 
-state REMOVEZOMBIETHREE 0DESTROYED 0
-frame 52 0.25 0 0 0 NONE
-frame 54 0.25 0 0 0 SETVAR map.killZombieDoorZeroZombieThree 1
-frame 55 0.25 0 0 0 SPAWN e_zombie 0,0,-32 0,0
-frame 56 0.25 0 0 0 READY
-
 state REMOVEZOMBIETWO 0DESTROYED 0
-frame 57 0.25 0 0 0 NONE
-frame 59 0.25 0 0 0 SETVAR map.killZombieDoorZeroZombieTwo 1
-frame 60 0.25 0 0 0 SPAWN e_zombie 0,0,-32 0,0
-frame 61 0.25 0 0 0 READY
+frame 52 0.25 0 0 0 NONE
+frame 53 0.25 0 0 0 SETVAR map.killZombieDoorZeroZombieTwo 1
+frame 54 0.25 0 0 0 SPAWN e_zombie 0,0,-32 0,0
+frame 55 0.25 0 0 0 READY
 
 state REMOVEZOMBIEONE 0DESTROYED 0
-frame 62 0.25 0 0 0 NONE
-frame 64 0.25 0 0 0 SETVAR map.killZombieDoorZeroZombieOne 1
-frame 65 0.25 0 0 0 SPAWN e_zombie 0,0,-32 0,0
-frame 66 0.25 0 0 0 READY
+frame 56 0.25 0 0 0 NONE
+frame 57 0.25 0 0 0 SETVAR map.killZombieDoorZeroZombieOne 1
+frame 58 0.25 0 0 0 SPAWN e_zombie 0,0,-32 0,0
+frame 59 0.25 0 0 0 READY
 
 state DEATH DEAD 0
-frame 67 0.25 0 0 0 NONE
-frame 68 0.25 0 0 0 READY
+frame 60 0.25 0 0 0 NONE
+frame 61 0.25 0 0 0 READY
 
 state DEAD NONE 0
-frame 69 0.25 0 0 0 NONE
-frame 70 0.25 0 0 0 NONE
+frame 62 0.25 0 0 0 NONE
+frame 63 0.25 0 0 0 NONE

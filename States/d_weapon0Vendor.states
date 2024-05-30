@@ -2,23 +2,23 @@ image d_weapon0Vendor 0 10
 
 state IDLE BUYWEAPON 0
 frame 0 0.25 0 0 0 NONE
-frame 5 0.25 0 0 0 READY
+frame 1 0.25 0 0 0 READY
 
 BUYWEAPON NONE 0
-frame 0 0.25 0 0 0 NONE
-frame 1 0.25 0 0 0 SETVAR map.d_weapon0VendorState "BUYWEAPON"
-frame 2 0.25 0 0 0 JUMPIFEQUALS map.d_weapon0VendorState "BUYAMMO" BUYAMMO
+frame 2 0.25 0 0 0 NONE
+frame 3 0.25 0 0 0 SETVAR map.d_weapon0VendorState "BUYWEAPON"
+frame 4 0.25 0 0 0 JUMPIFEQUALS map.d_weapon0VendorState "BUYAMMO" BUYAMMO
 frame 5 0.25 0 0 0 READY
 
 BUYAMMO NONE 0
-frame 0 0.25 0 0 0 NONE
-frame 5 0.25 0 0 0 READY
+frame 6 0.25 0 0 0 NONE
+frame 7 0.25 0 0 0 READY
 
 state DEATH DEAD 0
-frame 6 0.25 0 0 0 NONE
-frame 7 0.25 0 0 0 INCREMENT map.thingsThatHaveBeenKilled 1
 frame 8 0.25 0 0 0 NONE
+frame 9 0.25 0 0 0 INCREMENT map.thingsThatHaveBeenKilled 1
+frame 10 0.25 0 0 0 NONE
 
 state DEAD NONE 0
-frame 9 0.25 0 0 0 NONE
-frame 10 0.25 0 0 0 NONE
+frame 11 0.25 0 0 0 NONE
+frame 12 0.25 0 0 0 NONE

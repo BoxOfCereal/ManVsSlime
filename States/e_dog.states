@@ -10,7 +10,7 @@ frame 3 0.125 0 0 0 READY
 
 state CHASE NONE 0
 frame 4 1 0 0 0 NONE
-frame 5 1 0 0 0 NONE
+frame 5 0.25 0 0 0 JUMPIFEQUALS map.powerUpNukeFlag 1 DEATH
 frame 6 1 0 0 0 NONE
 frame 7 1 0 0 0 READY
 

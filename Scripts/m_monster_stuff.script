@@ -53,9 +53,17 @@ map.maxPlayerScore=0
 map.playerScoreScale=1
 
 // power up
+
+//1hko
 map.powerUpInstantKillFlag=0
 map.powerUpInstantKillPickup=0
 map.basePowerUpTimer=10
+
+//nuke
+map.powerUpNukeFlag=0
+map.powerUpNukePickup=0
+map.baseNukeTimer=5
+map.nukeTimer=0
 
 //weapons
 global.weapon0MaxBullets=10

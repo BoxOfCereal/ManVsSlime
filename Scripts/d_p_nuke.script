@@ -1,0 +1,5 @@
+map.powerUpNukePickup=0
+map.powerUpNukePickup+=1
+
+entity delete me
+map return

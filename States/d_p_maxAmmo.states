@@ -6,8 +6,8 @@ frame 1 0.25 0 0 0 READY
 
 state TICK NONE 0
 frame 2 0.25 0 0 0 NONE
-frame 5 0.25 0 0 0 NONE
+frame 3 0.25 0 0 0 NONE
 
 state DEAD NONE 0
-frame 6 0.25 0 0 0 NONE
-frame 7 0.25 0 0 0 NONE
+frame 4 0.25 0 0 0 NONE
+frame 5 0.25 0 0 0 NONE

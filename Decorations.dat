@@ -46,14 +46,6 @@ d_dogPortal 10
 -1
 -1
 16 1 0 0 1
-d_metrognomePlayer 11
-100
-0
-1
-1
--1
--1
-16 1 0 0 0
 d_zoneDoor0Locked 12
 100
 0
@@ -86,3 +78,27 @@ d_p_1hko 15
 -1
 -1
 16 1 0 0 1
+d_p_nuke 16
+100
+0
+0
+1
+-1
+-1
+16 1 0 0 1
+d_metrognome_nuke 17
+100
+1
+0
+1
+-1
+-1
+16 1 0 0 1
+d_metrognome_1hko 18
+100
+0
+1
+1
+-1
+-1
+16 1 0 0 0
