@@ -1,6 +1,7 @@
 //status "monstersLeft $map.monstersLeftToBeSpawned NextRound : $map.ticksToNextRound $map.nameOfCurrentRound DogSwitch: $map.spawnDogsSwitch" 1
 //status "P: $map.powerUpInstantKillPickup ,T: $map.powerUpTimer, F: $map.powerUpInstantKillFlag, BT: $map.basePowerUpTimer" 1
-status "p: $map.powerUpNukePickup , t: $map.nukeTimer,f: $map.powerUpNukeFlag" 1
+//status "p: $map.powerUpNukePickup , t: $map.nukeTimer,f: $map.powerUpNukeFlag" 1
+status "p: $map.powerUpDoublePointsPickup , t: $map.doublePointsTimer,f: $map.powerUpDoublePointsFlag" 1
 //status "map.monstersLeftToBeSpawned $map.monstersLeftToBeSpawned map.ticksToNextRound $map.ticksToNextRound map.currentRound : $map.currentRound" 1
 //status "S:$map.zombieDoorLogicState map.monstersLeftToBeSpawned $map.monstersLeftToBeSpawned map.ticksToNextRound $map.ticksToNextRound" 1
 //status "$map.zombieDoor0_HP , $map.tickSwitch, map.zombieDoor0_Zombies: $map.zombieDoor0_Zombies , "  .5 

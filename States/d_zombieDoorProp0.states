@@ -28,79 +28,80 @@ frame 16 0.25 0 0 0 READY
 
 state IDLETO75 IDLE75 0
 frame 17 0.25 0 0 0 NONE
-frame 18 0.25 0 0 0 READY
+frame 18 0.25 0 0 0 CUSTOMPARTICLE 45 0.5 2,68,0 1,1,1 1 -0.25
+frame 19 0.25 0 0 0 READY
 
 state 75TO50 IDLE50 0
-frame 19 0.25 0 0 0 NONE
-frame 20 0.25 0 0 0 READY
+frame 20 0.25 0 0 0 NONE
+frame 21 0.25 0 0 0 READY
 
 state 50TO25 IDLE25 0
-frame 21 0.25 0 0 0 NONE
-frame 22 0.25 0 0 0 READY
+frame 22 0.25 0 0 0 NONE
+frame 23 0.25 0 0 0 READY
 
 state 25TO0 0DESTROYED 0
-frame 23 0.25 0 0 0 NONE
-frame 24 0.25 0 0 0 READY
+frame 24 0.25 0 0 0 NONE
+frame 25 0.25 0 0 0 READY
 
 state 0TO25 IDLE25 0
-frame 25 0.25 0 0 0 NONE
-frame 26 0.25 0 0 0 READY
+frame 26 0.25 0 0 0 NONE
+frame 27 0.25 0 0 0 READY
 
 state 25TO50 IDLE50 0
-frame 27 0.25 0 0 0 NONE
-frame 28 0.25 0 0 0 READY
+frame 28 0.25 0 0 0 NONE
+frame 29 0.25 0 0 0 READY
 
 state 50TO75 IDLE75 0
-frame 29 0.25 0 0 0 NONE
-frame 30 0.25 0 0 0 READY
+frame 30 0.25 0 0 0 NONE
+frame 31 0.25 0 0 0 READY
 
 state 75TOIDLE IDLE 0
-frame 31 0.25 0 0 0 NONE
-frame 32 0.25 0 0 0 READY
+frame 32 0.25 0 0 0 NONE
+frame 33 0.25 0 0 0 READY
 
 state 0DESTROYED NONE 0
-frame 33 0.25 0 0 0 NONE
-frame 34 0.25 0 0 0 JUMPIFGREATER map.zombieDoor0_HP 0 0TO25
-frame 35 0.25 0 0 0 SETVAR randomNumber RANDOM(0,100)
-frame 36 0.25 0 0 0 JUMPIFGREATER randomNumber 70 SPAWNZOMBIE
-frame 37 0.25 0 0 0 READY
+frame 34 0.25 0 0 0 NONE
+frame 35 0.25 0 0 0 JUMPIFGREATER map.zombieDoor0_HP 0 0TO25
+frame 36 0.25 0 0 0 SETVAR randomNumber RANDOM(0,100)
+frame 37 0.25 0 0 0 JUMPIFGREATER randomNumber 70 SPAWNZOMBIE
+frame 38 0.25 0 0 0 READY
 
 state SPAWNZOMBIE 0DESTROYED 0
-frame 38 0.25 0 0 0 NONE
-frame 39 0.25 0 0 0 JUMPIFEQUALS map.IsZombieDoorZeroZombieOneAlive 1 REMOVEZOMBIEONE
-frame 40 0.25 0 0 0 JUMPIFEQUALS map.IsZombieDoorZeroZombieTwoAlive 1 REMOVEZOMBIETWO
-frame 41 0.25 0 0 0 JUMPIFEQUALS map.IsZombieDoorZeroZombieThreeAlive 1 REMOVEZOMBIETHREE
-frame 42 0.25 0 0 0 JUMPIFEQUALS map.IsZombieDoorZeroZombieFourAlive 1 REMOVEZOMBIEFOUR
-frame 43 0.25 0 0 0 READY
+frame 39 0.25 0 0 0 NONE
+frame 40 0.25 0 0 0 JUMPIFEQUALS map.IsZombieDoorZeroZombieOneAlive 1 REMOVEZOMBIEONE
+frame 41 0.25 0 0 0 JUMPIFEQUALS map.IsZombieDoorZeroZombieTwoAlive 1 REMOVEZOMBIETWO
+frame 42 0.25 0 0 0 JUMPIFEQUALS map.IsZombieDoorZeroZombieThreeAlive 1 REMOVEZOMBIETHREE
+frame 43 0.25 0 0 0 JUMPIFEQUALS map.IsZombieDoorZeroZombieFourAlive 1 REMOVEZOMBIEFOUR
+frame 44 0.25 0 0 0 READY
 
 state REMOVEZOMBIEFOUR 0DESTROYED 0
-frame 44 0.25 0 0 0 NONE
-frame 45 0.25 0 0 0 SETVAR map.killZombieDoorZeroZombieFour 1
-frame 46 0.25 0 0 0 SPAWN e_zombie 0,0,-32 0,0
-frame 47 0.25 0 0 0 READY
+frame 45 0.25 0 0 0 NONE
+frame 46 0.25 0 0 0 SETVAR map.killZombieDoorZeroZombieFour 1
+frame 47 0.25 0 0 0 SPAWN e_zombie 0,0,-32 0,0
+frame 48 0.25 0 0 0 READY
 
 state REMOVEZOMBIETHREE 0DESTROYED 0
-frame 48 0.25 0 0 0 NONE
-frame 49 0.25 0 0 0 SETVAR map.killZombieDoorZeroZombieThree 1
-frame 50 0.25 0 0 0 SPAWN e_zombie 0,0,-32 0,0
-frame 51 0.25 0 0 0 READY
+frame 49 0.25 0 0 0 NONE
+frame 50 0.25 0 0 0 SETVAR map.killZombieDoorZeroZombieThree 1
+frame 51 0.25 0 0 0 SPAWN e_zombie 0,0,-32 0,0
+frame 52 0.25 0 0 0 READY
 
 state REMOVEZOMBIETWO 0DESTROYED 0
-frame 52 0.25 0 0 0 NONE
-frame 53 0.25 0 0 0 SETVAR map.killZombieDoorZeroZombieTwo 1
-frame 54 0.25 0 0 0 SPAWN e_zombie 0,0,-32 0,0
-frame 55 0.25 0 0 0 READY
+frame 53 0.25 0 0 0 NONE
+frame 54 0.25 0 0 0 SETVAR map.killZombieDoorZeroZombieTwo 1
+frame 55 0.25 0 0 0 SPAWN e_zombie 0,0,-32 0,0
+frame 56 0.25 0 0 0 READY
 
 state REMOVEZOMBIEONE 0DESTROYED 0
-frame 56 0.25 0 0 0 NONE
-frame 57 0.25 0 0 0 SETVAR map.killZombieDoorZeroZombieOne 1
-frame 58 0.25 0 0 0 SPAWN e_zombie 0,0,-32 0,0
-frame 59 0.25 0 0 0 READY
+frame 57 0.25 0 0 0 NONE
+frame 58 0.25 0 0 0 SETVAR map.killZombieDoorZeroZombieOne 1
+frame 59 0.25 0 0 0 SPAWN e_zombie 0,0,-32 0,0
+frame 60 0.25 0 0 0 READY
 
 state DEATH DEAD 0
-frame 60 0.25 0 0 0 NONE
-frame 61 0.25 0 0 0 READY
+frame 61 0.25 0 0 0 NONE
+frame 62 0.25 0 0 0 READY
 
 state DEAD NONE 0
-frame 62 0.25 0 0 0 NONE
 frame 63 0.25 0 0 0 NONE
+frame 64 0.25 0 0 0 NONE

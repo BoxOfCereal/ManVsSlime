@@ -1,0 +1,35 @@
+image d_metrognome_doublePoints 0 19
+
+state IDLE TICK 0
+frame 0 0.25 0 0 0 NONE
+frame 1 0.25 0 0 0 READY
+
+state TICK NONE 0
+frame 2 0.25 0 0 0 NONE
+frame 3 0.25 0 0 0 JUMPIFEQUALS map.powerUpDoublePointsPickup 1 DOUBLEPOINTSSETUP
+frame 4 0.25 0 0 0 NONE
+
+state DOUBLEPOINTSSETUP DOUBLEPOINTSTICK 0
+frame 5 0.25 0 0 0 NONE
+frame 6 0.25 0 0 0 SETVAR map.doublePointsTimer $map.baseDoublePointsTimer
+frame 7 0.25 0 0 0 SETVAR map.powerUpDoublePointsPickup 0
+frame 8 0.25 0 0 0 SETVAR map.powerUpDoublePointsFlag 1
+
+state DOUBLEPOINTSTICK NONE 0
+frame 9 0.25 0 0 0 NONE
+frame 10 0.25 0 0 0 DECREMENT map.doublePointsTimer 1
+frame 11 0.25 0 0 0 CLAMP map.doublePointsTimer 0 100
+frame 12 0.25 0 0 0 JUMPIFLEQUALS map.doublePointsTimer 1 CLEANUP
+
+state CLEANUP TICK 0
+frame 13 0.25 0 0 0 NONE
+frame 14 0.25 0 0 0 SETVAR map.powerUpDoublePointsFlag 0
+
+state DEATH DEAD 0
+frame 15 0.25 0 0 0 NONE
+frame 16 0.25 0 0 0 INCREMENT map.thingsThatHaveBeenKilled 1
+frame 17 0.25 0 0 0 NONE
+
+state DEAD NONE 0
+frame 18 0.25 0 0 0 NONE
+frame 19 0.25 0 0 0 NONE

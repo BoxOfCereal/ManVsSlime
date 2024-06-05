@@ -1,0 +1,5 @@
+map.powerUpDoublePointsPickup=0
+map.powerUpDoublePointsPickup+=1
+
+entity delete me
+map return
