@@ -71,6 +71,7 @@ map.powerUpDoublePointsPickup=0
 map.baseDoublePointsTimer=5
 map.doublePointsTimer=0
 
+
 //weapons
 global.weapon0MaxBullets=10
 global.weapon1MaxBullets=10
