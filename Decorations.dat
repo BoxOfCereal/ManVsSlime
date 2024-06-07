@@ -118,3 +118,19 @@ d_p_doublePoints 20
 -1
 -1
 16 1 0 0 1
+d_p_repair 21
+100
+0
+0
+1
+-1
+-1
+16 1 0 0 1
+d_metrognome_repair 22
+100
+1
+1
+1
+-1
+-1
+16 1 0 0 1

@@ -71,6 +71,11 @@ map.powerUpDoublePointsPickup=0
 map.baseDoublePointsTimer=5
 map.doublePointsTimer=0
 
+//repair
+map.powerUpRepairFlag=0
+map.powerUpRepairPickup=0
+map.basePowerUpRepairTimer=5
+map.powerUpRepairTimer=0
 
 //weapons
 global.weapon0MaxBullets=10

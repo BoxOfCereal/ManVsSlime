@@ -18,19 +18,19 @@ frame 8 0.25 0 0 0 SETVAR map.powerUpDoublePointsFlag 1
 state DOUBLEPOINTSTICK NONE 0
 frame 9 0.25 0 0 0 NONE
 frame 10 0.25 0 0 0 DECREMENT map.doublePointsTimer 1
-frame 11 0.25 0 0 0 HUDIMG test .25 .25 1 HUD/HP.png 1
 frame 11 0.25 0 0 0 CLAMP map.doublePointsTimer 0 100
-frame 12 0.25 0 0 0 JUMPIFLEQUALS map.doublePointsTimer 1 CLEANUP
+frame 12 0.25 0 0 0 HUDIMG test .25 .25 1 HUD/HP.png 1
+frame 13 0.25 0 0 0 JUMPIFLEQUALS map.doublePointsTimer 1 CLEANUP
 
 state CLEANUP TICK 0
-frame 13 0.25 0 0 0 NONE
-frame 14 0.25 0 0 0 SETVAR map.powerUpDoublePointsFlag 0
+frame 14 0.25 0 0 0 NONE
+frame 15 0.25 0 0 0 SETVAR map.powerUpDoublePointsFlag 0
 
 state DEATH DEAD 0
-frame 15 0.25 0 0 0 NONE
-frame 16 0.25 0 0 0 INCREMENT map.thingsThatHaveBeenKilled 1
-frame 17 0.25 0 0 0 NONE
+frame 16 0.25 0 0 0 NONE
+frame 17 0.25 0 0 0 INCREMENT map.thingsThatHaveBeenKilled 1
+frame 18 0.25 0 0 0 NONE
 
 state DEAD NONE 0
-frame 18 0.25 0 0 0 NONE
 frame 19 0.25 0 0 0 NONE
+frame 20 0.25 0 0 0 NONE
