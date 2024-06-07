@@ -1,9 +1,11 @@
 
-map.zombieDoor0_HP=0
-map.zombieDoor0_HP+=100
+//map.zombieDoor0_HP=0
+//map.zombieDoor0_HP+=100
 
 //map.zombieDoor1_HP=0
 //map.zombieDoor1_HP+=100
+map.powerUpRepairPickup=0
+map.powerUpRepairPickup+=1
 
 entity delete me
 map return
