@@ -20,19 +20,19 @@ state REPAIRTICK NONE 0
 frame 10 0.25 0 0 0 NONE
 frame 11 0.25 0 0 0 DECREMENT map.powerUpRepairTimer 1
 frame 12 0.25 0 0 0 CLAMP map.powerUpRepairTimer 0 100
-frame 12 0.25 0 0 0 INCREMENT map.zombieDoor0_HP 100
-frame 12 0.25 0 0 0 CLAMP map.zombieDoor0_HP 0 100
-frame 13 0.25 0 0 0 JUMPIFLEQUALS map.powerUpRepairTimer 1 CLEANUP
+frame 13 0.25 0 0 0 INCREMENT map.zombieDoor0_HP 100
+frame 14 0.25 0 0 0 CLAMP map.zombieDoor0_HP 0 100
+frame 15 0.25 0 0 0 JUMPIFLEQUALS map.powerUpRepairTimer 1 CLEANUP
 
 state CLEANUP TICK 0
-frame 14 0.25 0 0 0 NONE
-frame 15 0.25 0 0 0 SETVAR map.powerUpRepairFlag 0
+frame 16 0.25 0 0 0 NONE
+frame 17 0.25 0 0 0 SETVAR map.powerUpRepairFlag 0
 
 state DEATH DEAD 0
-frame 16 0.25 0 0 0 NONE
-frame 17 0.25 0 0 0 INCREMENT map.thingsThatHaveBeenKilled 1
 frame 18 0.25 0 0 0 NONE
+frame 19 0.25 0 0 0 INCREMENT map.thingsThatHaveBeenKilled 1
+frame 20 0.25 0 0 0 NONE
 
 state DEAD NONE 0
-frame 19 0.25 0 0 0 NONE
-frame 20 0.25 0 0 0 NONE
+frame 21 0.25 0 0 0 NONE
+frame 22 0.25 0 0 0 NONE

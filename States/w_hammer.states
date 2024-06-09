@@ -1,0 +1,85 @@
+image w_hammer 0 273
+
+state IDLE NONE 0
+frame 1 0.125 0 0 0 NONE
+frame 2 0.125 0 0 0 NONE
+frame 3 0.125 0 0 0 NONE
+frame 4 0.125 0 0 0 NONE
+frame 5 0.125 0 0 0 NONE
+frame 6 0.125 0 0 0 NONE
+frame 7 0.125 0 0 0 NONE
+frame 8 0.125 0 0 0 NONE
+frame 9 0.125 0 0 0 NONE
+frame 10 0.225 0 0 0 NONE
+frame 9 0.125 0 0 0 NONE
+frame 8 0.125 0 0 0 NONE
+frame 7 0.125 0 0 0 NONE
+frame 6 0.125 0 0 0 NONE
+frame 5 0.125 0 0 0 NONE
+frame 4 0.125 0 0 0 NONE
+frame 3 0.125 0 0 0 NONE
+frame 2 0.125 0 0 0 NONE
+frame 1 0.125 0 0 0 NONE
+
+
+
+state ATTACK IDLE 0
+frame 51 0.125 0 0 0 NONE
+frame 52 0.125 0 0 0 NONE
+frame 53 0.125 0 0 0 NONE
+frame 54 0.125 0 0 0 NONE
+frame 55 0.125 0 0 0 NONE
+frame 56 0.125 0 0 0 NONE
+frame 57 0.125 0 0 0 NONE
+frame 58 0.125 0 0 0 NONE
+frame 59 0.125 0 0 0 NONE
+frame 60 0.125 0 0 0 NONE
+frame 61 0.125 0 0 0 NONE
+frame 62 0.125 0 0 0 NONE
+frame 63 0.125 0 0 0 NONE
+frame 64 0.125 0 0 0 NONE
+frame 65 0.125 0 0 0 NONE
+frame 66 0.125 0 0 0 NONE
+frame 67 0.125 0 0 0 NONE
+frame 68 0.125 0 0 0 NONE
+frame 69 0.125 0 0 0 NONE
+frame 70 0.125 0 0 0 NONE
+frame 71 0.125 0 0 0 NONE
+frame 72 0.125 0 0 0 NONE
+frame 73 0.125 0 0 0 NONE
+frame 74 0.125 0 0 0 NONE
+frame 75 0.125 0 0 0 NONE
+frame 76 0.125 0 0 0 NONE
+frame 77 0.125 0 0 0 NONE
+frame 78 0.125 0 0 0 NONE
+frame 79 0.125 0 0 0 NONE
+frame 80 0.125 0 0 0 NONE
+frame 81 0.125 0 0 0 NONE
+frame 82 0.125 0 0 0 NONE
+frame 83 0.125 0 0 0 NONE
+frame 84 0.125 0 0 0 NONE
+frame 85 0.125 0 0 0 NONE
+frame 86 0.125 0 0 0 NONE
+frame 87 0.125 0 0 0 NONE
+frame 88 0.125 0 0 0 NONE
+frame 89 0.125 0 0 0 NONE
+frame 90 0.125 0 0 0 NONE
+frame 91 0.125 0 0 0 NONE
+frame 92 0.125 0 0 0 NONE
+frame 93 0.125 0 0 0 NONE
+frame 94 0.125 0 0 0 NONE
+frame 95 0.125 0 0 0 NONE
+frame 96 0.125 0 0 0 NONE
+frame 97 0.125 0 0 0 NONE
+frame 98 0.125 0 0 0 NONE
+frame 99 0.125 0 0 0 NONE
+frame 100 0.125 0 0 0 NONE
+
+
+
+state RELOAD IDLE 0
+frame 1 0 0 0 0 NONE
+frame 1 0.1 0 0 0 NONE
+frame 1 0.1 0 200 0 NONE
+frame 1 0.1 0 200 0 RELOAD
+frame 1 0.1 0 0 0 SOUND 1
